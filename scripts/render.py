@@ -74,13 +74,13 @@ def render_day_header(d):
         lines += ["", "| 專案 | tag | commit | 重點檔案 |", "|---|---|---|---|"]
         for p in projects:
             ref = p.get("sha") or p.get("tag") or "HEAD"
-            short = p["sha"][:7] if p.get("sha") else " "
+            short = f"`{p['sha'][:7]}`" if p.get("sha") else " "
             paths = "<br>".join(
                 f"[{x}]({gh(p['repo'], ref, x)})" for x in p.get("paths") or []
             ) or " "
             tag = f"[{p['tag']}]({gh(p['repo'], p['tag'])})" if p.get("tag") else " "
             lines.append(
-                f"| [{p['repo']}](https://github.com/{p['repo']}) | {tag} | `{short}` | {paths} |"
+                f"| [{p['repo']}](https://github.com/{p['repo']}) | {tag} | {short} | {paths} |"
             )
     return "\n".join(lines)
 

@@ -8,7 +8,7 @@
 
 | 專案 | tag | commit | 重點檔案 |
 |---|---|---|---|
-| [ivanusto/onprem-ops-30days](https://github.com/ivanusto/onprem-ops-30days) |   | ` ` |   |
+| [ivanusto/onprem-ops-30days](https://github.com/ivanusto/onprem-ops-30days) |   |   |   |
 <!-- DAY:END -->
 
 ## 摘要
