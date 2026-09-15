@@ -23,10 +23,10 @@ days:
   - day: 1
     part: 1
     category: overview
-    title: 前言：第二個三十天，換一個問題
-    status: draft
-    date:
-    article:
+    title: 系列規劃與場域總覽：從跑得起來到可長期維運，先談為什麼要封裝
+    status: published
+    date: 2026-09-15
+    article: https://ithelp.ithome.com.tw/articles/10410628
     projects: []
 
   # ---- 第一段：開源服務封裝 ----
