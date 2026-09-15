@@ -1,0 +1,4 @@
+# 個人字串清單（帳號名、主機名、網域），只在本機給 check.py 用
+.pii-patterns
+__pycache__/
+.venv/

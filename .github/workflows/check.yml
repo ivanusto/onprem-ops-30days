@@ -1,0 +1,28 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 2 * * 1"   # 每週一檢查 tag 是否被移動、文章連結是否失效
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: README 與 days 是否已同步
+        run: python3 scripts/render.py --check
+      - name: tag、SHA、路徑、連結與文字
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/check.py

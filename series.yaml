@@ -1,0 +1,77 @@
+# 系列索引的唯一資料來源。改完執行 python3 scripts/render.py 產生 README 與 days/*.md。
+#
+# status:   planned（尚未動筆） | draft（撰寫中） | published（已發表，必須有 date 與 article）
+# part:     1 開源服務封裝 | 2 容量規劃、GPU 節點、儲存與備份 | 3 可觀測性、資安維運與變更管理
+# category: packaging | node-guard | storage-backup | change-mgmt | overview
+# projects: 文章發表時，在專案 repo 打 release tag，並記下 tag 指向的 commit SHA（40 碼）。
+#           sha 一定要加引號，否則全數字的 SHA 會被 YAML 當成整數。
+#           paths 是文章主要講到的檔案或目錄，會產生釘在該 SHA 的永久連結。
+#           標題標「暫定」者依路線圖先占位，發文時再更正。
+
+series:
+  title: 地端維運三十天
+  previous:
+    title: 128GB 統一記憶體的三十天：DGX Spark 地端 LLM 與生成式 AI 部署實戰
+    url: https://ithelp.ithome.com.tw/users/20141816/ironman/9217
+
+parts:
+  1: 開源服務封裝
+  2: 容量規劃、GPU 節點、儲存與備份
+  3: 可觀測性、資安維運與可稽核的變更管理
+
+days:
+  - day: 1
+    part: 1
+    category: overview
+    title: 前言：第二個三十天，換一個問題
+    status: draft
+    date:
+    article:
+    projects: []
+
+  # ---- 第一段：開源服務封裝 ----
+  - day: 2
+    part: 1
+    category: packaging
+    title: 薄殼架構
+    status: planned
+    date:
+    article:
+    projects:
+      - repo: ivanusto/open-webui-ollama-qpkg
+        tag: v1.0.7
+        sha: "51881ab1b0ad8a1c5ecd1f24a2eea41584f453f4"
+        paths: [package_routines, shared]
+
+  - {day: 3, part: 1, category: packaging, title: Open WebUI 加 Ollama 封裝（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 4, part: 1, category: packaging, title: ComfyUI 封裝（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 5, part: 1, category: packaging, title: Jellyfin 與 Roon 封裝（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 6, part: 1, category: packaging, title: changedetection.io 與 Homepage 封裝（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 7, part: 1, category: packaging, title: GitHub Actions 自動打包與 release（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 8, part: 1, category: packaging, title: image digest 鎖定與 SHA256SUMS（暫定）, status: planned, date: , article: , projects: []}
+
+  # ---- 第二段：容量規劃、GPU 節點、儲存與備份 ----
+  - {day: 9, part: 2, category: node-guard, title: 容量規劃：模型與硬體搭配矩陣（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 10, part: 2, category: node-guard, title: DGX Spark 節點基線（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 11, part: 2, category: node-guard, title: 熱與記憶體守護（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 12, part: 2, category: storage-backup, title: NFS 集中模型庫的權限與版本治理（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 13, part: 2, category: storage-backup, title: 儲存路徑實測（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 14, part: 2, category: storage-backup, title: Proxmox VE 雙節點 HA（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 15, part: 2, category: storage-backup, title: Proxmox VE 備份與還原演練（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 16, part: 2, category: storage-backup, title: NAS 快照（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 17, part: 2, category: storage-backup, title: 3-2-1 備份（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 18, part: 2, category: storage-backup, title: 媒體庫外移 GCS 與 S3（暫定）, status: planned, date: , article: , projects: []}
+
+  # ---- 第三段：可觀測性、資安維運與可稽核的變更管理 ----
+  - {day: 19, part: 3, category: node-guard, title: 指標收集（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 20, part: 3, category: node-guard, title: Grafana 儀表板（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 21, part: 3, category: change-mgmt, title: 日誌集中與保存（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 22, part: 3, category: change-mgmt, title: 防火牆日誌判讀（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 23, part: 3, category: change-mgmt, title: 網路封包擷取與分析（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 24, part: 3, category: change-mgmt, title: 維運工作站（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 25, part: 3, category: change-mgmt, title: 資產 EOL 監看（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 26, part: 3, category: change-mgmt, title: 變更管理（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 27, part: 3, category: change-mgmt, title: 稽核軌跡（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 28, part: 3, category: change-mgmt, title: 回滾與變更演練（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 29, part: 3, category: change-mgmt, title: AI Agent 進入維運流程的授權閘道（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 30, part: 3, category: change-mgmt, title: 一年成本與用電總結（暫定）, status: planned, date: , article: , projects: []}
