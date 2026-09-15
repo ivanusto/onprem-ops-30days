@@ -10,6 +10,7 @@
 
 series:
   title: 地端維運三十天
+  repo: ivanusto/onprem-ops-30days   # 索引 repo 本身，連到它時不需要 tag
   previous:
     title: 128GB 統一記憶體的三十天：DGX Spark 地端 LLM 與生成式 AI 部署實戰
     url: https://ithelp.ithome.com.tw/users/20141816/ironman/9217
@@ -27,7 +28,8 @@ days:
     status: published
     date: 2026-09-15
     article: https://ithelp.ithome.com.tw/articles/10410628
-    projects: []
+    projects:
+      - repo: ivanusto/onprem-ops-30days
 
   # ---- 第一段：開源服務封裝 ----
   - day: 2

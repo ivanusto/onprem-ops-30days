@@ -38,7 +38,7 @@ def code_cell(d):
         if p.get("tag"):
             items.append(f"[{name}@{p['tag']}]({gh(p['repo'], p['tag'])})")
         else:
-            items.append(f"[{name}]({gh(p['repo'], 'HEAD')})")
+            items.append(f"[{name}](https://github.com/{p['repo']})")
     return "<br>".join(items) if items else " "
 
 

@@ -29,7 +29,7 @@
 
 | Day | 主題 | 類別 | 文章 | 程式碼 |
 |---:|---|---|---|---|
-| [01](days/day-01.md) | 系列規劃與場域總覽：從跑得起來到可長期維運，先談為什麼要封裝 | `overview` | [閱讀](https://ithelp.ithome.com.tw/articles/10410628) |   |
+| [01](days/day-01.md) | 系列規劃與場域總覽：從跑得起來到可長期維運，先談為什麼要封裝 | `overview` | [閱讀](https://ithelp.ithome.com.tw/articles/10410628) | [onprem-ops-30days](https://github.com/ivanusto/onprem-ops-30days) |
 | [02](days/day-02.md) | 薄殼架構 | `packaging` | 即將發表 | [open-webui-ollama-qpkg@v1.0.7](https://github.com/ivanusto/open-webui-ollama-qpkg/tree/v1.0.7) |
 | [03](days/day-03.md) | Open WebUI 加 Ollama 封裝（暫定） | `packaging` | 即將發表 |   |
 | [04](days/day-04.md) | ComfyUI 封裝（暫定） | `packaging` | 即將發表 |   |

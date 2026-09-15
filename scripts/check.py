@@ -68,7 +68,8 @@ def check_schema(data):
                 err(f"{tag} {p.get('repo')} 的 sha 被 YAML 解析成數字，請加引號")
             elif p.get("tag") and not re.fullmatch(r"[0-9a-f]{40}", sha or ""):
                 err(f"{tag} {p.get('repo')} 有 tag 但 sha 不是 40 碼")
-            if d.get("status") == "published" and not p.get("tag"):
+            is_self = p.get("repo") == (data.get("series") or {}).get("repo")
+            if d.get("status") == "published" and not p.get("tag") and not is_self:
                 err(f"{tag} 已發表但 {p.get('repo')} 沒有釘 tag")
 
 
