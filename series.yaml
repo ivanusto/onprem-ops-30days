@@ -49,14 +49,18 @@ days:
     part: 1
     category: packaging
     title: 版本鎖定與供應鏈：image digest、SHA256SUMS 與授權檔
-    status: draft
-    date:
-    article:
+    status: published
+    date: 2026-09-17
+    article: https://ithelp.ithome.com.tw/articles/10412285
     projects:
       - repo: ivanusto/qpkg-template
         tag: v0.1.0
         sha: "db764272aded70034fdc350598501400f3cf5707"
         paths: [shared/images.lock, scripts/pin-images.sh, scripts/check-pins.sh, shared/lib/qpkg-core.sh, .github/workflows/build.yml]
+      - repo: ivanusto/qpkg-template
+        tag: v0.1.1
+        sha: "cd68c4b2a0217a51917ea8bbdcafbb1a3ef276ee"
+        paths: [NOTICE.md, shared/lib/qpkg-core.sh]
       - repo: ivanusto/Jellyfin-QPKG
         tag: v1.2.1
         sha: "a0f0be46199f1fe1bcc2bea04563a250e4b8355f"

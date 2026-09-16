@@ -31,7 +31,7 @@
 |---:|---|---|---|---|
 | [01](days/day-01.md) | 系列規劃與場域總覽：從跑得起來到可長期維運，先談為什麼要封裝 | `overview` | [閱讀](https://ithelp.ithome.com.tw/articles/10410628) | [onprem-ops-30days](https://github.com/ivanusto/onprem-ops-30days) |
 | [02](days/day-02.md) | Container Station 薄殼架構：QPKG 骨架、生命週期腳本與狀態頁 | `packaging` | [閱讀](https://ithelp.ithome.com.tw/articles/10411500) | [open-webui-ollama-qpkg@v1.0.7](https://github.com/ivanusto/open-webui-ollama-qpkg/tree/v1.0.7) |
-| [03](days/day-03.md) | 版本鎖定與供應鏈：image digest、SHA256SUMS 與授權檔 | `packaging` | 撰寫中 | [qpkg-template@v0.1.0](https://github.com/ivanusto/qpkg-template/tree/v0.1.0)<br>[Jellyfin-QPKG@v1.2.1](https://github.com/ivanusto/Jellyfin-QPKG/tree/v1.2.1) |
+| [03](days/day-03.md) | 版本鎖定與供應鏈：image digest、SHA256SUMS 與授權檔 | `packaging` | [閱讀](https://ithelp.ithome.com.tw/articles/10412285) | [qpkg-template@v0.1.0](https://github.com/ivanusto/qpkg-template/tree/v0.1.0)<br>[qpkg-template@v0.1.1](https://github.com/ivanusto/qpkg-template/tree/v0.1.1)<br>[Jellyfin-QPKG@v1.2.1](https://github.com/ivanusto/Jellyfin-QPKG/tree/v1.2.1) |
 | [04](days/day-04.md) | GitHub Actions 自動打包與 release（暫定） | `packaging` | 即將發表 |   |
 | [05](days/day-05.md) | Jellyfin 與 Roon 封裝（暫定） | `packaging` | 即將發表 |   |
 | [06](days/day-06.md) | changedetection.io 與 Homepage 封裝（暫定） | `packaging` | 即將發表 |   |
