@@ -1,5 +1,5 @@
 <!-- DAY:START -->
-# Day 07：GitHub Actions 自動打包與 release（暫定）
+# Day 07：ComfyUI 封裝（暫定）
 
 - 狀態：即將發表
 - 類別：`packaging`

@@ -1,7 +1,9 @@
 <!-- DAY:START -->
-# Day 02：薄殼架構
+# Day 02：Container Station 薄殼架構：QPKG 骨架、生命週期腳本與狀態頁
 
-- 狀態：即將發表
+- 狀態：已發表
+- 發表日期：2026-09-16
+- 文章：https://ithelp.ithome.com.tw/articles/10411500
 - 類別：`packaging`
 
 | 專案 | tag | commit | 重點檔案 |

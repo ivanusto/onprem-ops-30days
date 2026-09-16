@@ -35,22 +35,38 @@ days:
   - day: 2
     part: 1
     category: packaging
-    title: 薄殼架構
-    status: planned
-    date:
-    article:
+    title: Container Station 薄殼架構：QPKG 骨架、生命週期腳本與狀態頁
+    status: published
+    date: 2026-09-16
+    article: https://ithelp.ithome.com.tw/articles/10411500
     projects:
       - repo: ivanusto/open-webui-ollama-qpkg
         tag: v1.0.7
         sha: "51881ab1b0ad8a1c5ecd1f24a2eea41584f453f4"
         paths: [package_routines, shared]
 
-  - {day: 3, part: 1, category: packaging, title: Open WebUI 加 Ollama 封裝（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 4, part: 1, category: packaging, title: ComfyUI 封裝（暫定）, status: planned, date: , article: , projects: []}
+  - day: 3
+    part: 1
+    category: packaging
+    title: 版本鎖定與供應鏈：image digest、SHA256SUMS 與授權檔
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/qpkg-template
+        tag: v0.1.0
+        sha: "db764272aded70034fdc350598501400f3cf5707"
+        paths: [shared/images.lock, scripts/pin-images.sh, scripts/check-pins.sh, shared/lib/qpkg-core.sh, .github/workflows/build.yml]
+      - repo: ivanusto/Jellyfin-QPKG
+        tag: v1.2.1
+        sha: "a0f0be46199f1fe1bcc2bea04563a250e4b8355f"
+        paths: [NOTICE.md]
+
+  - {day: 4, part: 1, category: packaging, title: GitHub Actions 自動打包與 release（暫定）, status: planned, date: , article: , projects: []}
   - {day: 5, part: 1, category: packaging, title: Jellyfin 與 Roon 封裝（暫定）, status: planned, date: , article: , projects: []}
   - {day: 6, part: 1, category: packaging, title: changedetection.io 與 Homepage 封裝（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 7, part: 1, category: packaging, title: GitHub Actions 自動打包與 release（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 8, part: 1, category: packaging, title: image digest 鎖定與 SHA256SUMS（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 7, part: 1, category: packaging, title: ComfyUI 封裝（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 8, part: 1, category: packaging, title: 待定（暫定）, status: planned, date: , article: , projects: []}
 
   # ---- 第二段：容量規劃、GPU 節點、儲存與備份 ----
   - {day: 9, part: 2, category: node-guard, title: 容量規劃：模型與硬體搭配矩陣（暫定）, status: planned, date: , article: , projects: []}
