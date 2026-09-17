@@ -66,7 +66,23 @@ days:
         sha: "a0f0be46199f1fe1bcc2bea04563a250e4b8355f"
         paths: [NOTICE.md]
 
-  - {day: 4, part: 1, category: packaging, title: GitHub Actions 自動打包與 release（暫定）, status: planned, date: , article: , projects: []}
+  - day: 4
+    part: 1
+    category: packaging
+    title: GitHub Actions 自動打包與 release：從 git tag 到可驗證的套件
+    status: published
+    date: 2026-09-18
+    article: https://ithelp.ithome.com.tw/articles/10412681
+    projects:
+      - repo: ivanusto/qpkg-template
+        tag: v0.1.1
+        sha: "cd68c4b2a0217a51917ea8bbdcafbb1a3ef276ee"
+        paths: [.github/workflows/build.yml, tests/lifecycle.sh, scripts/new-app.sh, Makefile]
+      - repo: ivanusto/qpkg-template
+        tag: v0.1.2
+        sha: "f960fdbab9a7104ef2ecb832227f696783da01d4"
+        paths: [.github/workflows/build.yml, Dockerfile, scripts/check-ci-pins.sh, .github/dependabot.yml]
+
   - {day: 5, part: 1, category: packaging, title: Jellyfin 與 Roon 封裝（暫定）, status: planned, date: , article: , projects: []}
   - {day: 6, part: 1, category: packaging, title: changedetection.io 與 Homepage 封裝（暫定）, status: planned, date: , article: , projects: []}
   - {day: 7, part: 1, category: packaging, title: ComfyUI 封裝（暫定）, status: planned, date: , article: , projects: []}
