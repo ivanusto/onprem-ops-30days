@@ -86,10 +86,10 @@ days:
   - day: 5
     part: 1
     category: packaging
-    title: 案例一 Jellyfin 與 Roon：硬體轉碼的裝置直通與主機網路
-    status: draft
-    date:
-    article:
+    title: 案例 Jellyfin 與 Roon：硬體轉碼的裝置直通與主機網路
+    status: published
+    date: 2026-09-19
+    article: https://ithelp.ithome.com.tw/articles/10413495
     projects:
       - repo: ivanusto/Jellyfin-QPKG
         tag: v1.2.1
@@ -99,6 +99,7 @@ days:
         tag: v1.2.3
         sha: "ab965b2a8732781a40b99130494a57dc40f79267"
         paths: [shared/roon-server-docker.sh, shared/web/cgi-bin/save.cgi, package_routines, qpkg.cfg]
+
   - {day: 6, part: 1, category: packaging, title: changedetection.io 與 Homepage 封裝（暫定）, status: planned, date: , article: , projects: []}
   - {day: 7, part: 1, category: packaging, title: ComfyUI 封裝（暫定）, status: planned, date: , article: , projects: []}
   - {day: 8, part: 1, category: packaging, title: 待定（暫定）, status: planned, date: , article: , projects: []}

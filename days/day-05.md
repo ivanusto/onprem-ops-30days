@@ -1,7 +1,9 @@
 <!-- DAY:START -->
-# Day 05：案例一 Jellyfin 與 Roon：硬體轉碼的裝置直通與主機網路
+# Day 05：案例 Jellyfin 與 Roon：硬體轉碼的裝置直通與主機網路
 
-- 狀態：撰寫中
+- 狀態：已發表
+- 發表日期：2026-09-19
+- 文章：https://ithelp.ithome.com.tw/articles/10413495
 - 類別：`packaging`
 
 | 專案 | tag | commit | 重點檔案 |

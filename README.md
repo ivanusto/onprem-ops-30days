@@ -33,7 +33,7 @@
 | [02](days/day-02.md) | Container Station 薄殼架構：QPKG 骨架、生命週期腳本與狀態頁 | `packaging` | [閱讀](https://ithelp.ithome.com.tw/articles/10411500) | [open-webui-ollama-qpkg@v1.0.7](https://github.com/ivanusto/open-webui-ollama-qpkg/tree/v1.0.7) |
 | [03](days/day-03.md) | 版本鎖定與供應鏈：image digest、SHA256SUMS 與授權檔 | `packaging` | [閱讀](https://ithelp.ithome.com.tw/articles/10412285) | [qpkg-template@v0.1.0](https://github.com/ivanusto/qpkg-template/tree/v0.1.0)<br>[qpkg-template@v0.1.1](https://github.com/ivanusto/qpkg-template/tree/v0.1.1)<br>[Jellyfin-QPKG@v1.2.1](https://github.com/ivanusto/Jellyfin-QPKG/tree/v1.2.1) |
 | [04](days/day-04.md) | GitHub Actions 自動打包與 release：從 git tag 到可驗證的套件 | `packaging` | [閱讀](https://ithelp.ithome.com.tw/articles/10412681) | [qpkg-template@v0.1.1](https://github.com/ivanusto/qpkg-template/tree/v0.1.1)<br>[qpkg-template@v0.1.2](https://github.com/ivanusto/qpkg-template/tree/v0.1.2) |
-| [05](days/day-05.md) | 案例一 Jellyfin 與 Roon：硬體轉碼的裝置直通與主機網路 | `packaging` | 撰寫中 | [Jellyfin-QPKG@v1.2.1](https://github.com/ivanusto/Jellyfin-QPKG/tree/v1.2.1)<br>[roon-qpkg@v1.2.3](https://github.com/ivanusto/roon-qpkg/tree/v1.2.3) |
+| [05](days/day-05.md) | 案例 Jellyfin 與 Roon：硬體轉碼的裝置直通與主機網路 | `packaging` | [閱讀](https://ithelp.ithome.com.tw/articles/10413495) | [Jellyfin-QPKG@v1.2.1](https://github.com/ivanusto/Jellyfin-QPKG/tree/v1.2.1)<br>[roon-qpkg@v1.2.3](https://github.com/ivanusto/roon-qpkg/tree/v1.2.3) |
 | [06](days/day-06.md) | changedetection.io 與 Homepage 封裝（暫定） | `packaging` | 即將發表 |   |
 | [07](days/day-07.md) | ComfyUI 封裝（暫定） | `packaging` | 即將發表 |   |
 | [08](days/day-08.md) | 待定（暫定） | `packaging` | 即將發表 |   |
