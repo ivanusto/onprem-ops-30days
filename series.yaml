@@ -100,7 +100,35 @@ days:
         sha: "ab965b2a8732781a40b99130494a57dc40f79267"
         paths: [shared/roon-server-docker.sh, shared/web/cgi-bin/save.cgi, package_routines, qpkg.cfg]
 
-  - {day: 6, part: 1, category: packaging, title: changedetection.io 與 Homepage 封裝（暫定）, status: planned, date: , article: , projects: []}
+  - day: 6
+    part: 1
+    category: packaging
+    title: 案例 changedetection.io 與 Homepage：資安與資訊公告監看 + 整合入口
+    status: published
+    date: 2026-09-20
+    article: https://ithelp.ithome.com.tw/articles/10414435
+    projects:
+      - repo: ivanusto/changedetection-qpkg
+        tag: v0.60.3
+        sha: "527ee3e17ec87d31dc65e0d94ca3b9837010d0bb"
+        paths: [qpkg/package_routines, qpkg/shared/changedetection.sh, .github/workflows/build-qpkg.yml]
+      - repo: ivanusto/changedetection-qpkg
+        tag: v0.60.3-1
+        sha: "aefae857fe425d242921defa147feef1d8bb0abd"
+        paths: [qpkg/package_routines]
+      - repo: ivanusto/homepage-qpkg
+        tag: v1.0.7
+        sha: "b95f75a504cbbfe9b30daacd4334be21a29f03a9"
+        paths: [shared/homepage.sh, shared/skeleton/docker.yaml]
+      - repo: ivanusto/homepage-qpkg
+        tag: v1.0.8
+        sha: "8bd1e75bd4d938add413538348f5cfb063d89467"
+        paths: [shared/homepage.sh, shared/homepage.conf.default, package_routines]
+      - repo: ivanusto/qpkg-template
+        tag: v0.2.0
+        sha: "abb110d329ca9a619858a732c4c1e2d72463ec60"
+        paths: [shared/lib/qpkg-core.sh, shared/myapp.sh, tests/lifecycle.sh, package_routines]
+
   - {day: 7, part: 1, category: packaging, title: ComfyUI 封裝（暫定）, status: planned, date: , article: , projects: []}
   - {day: 8, part: 1, category: packaging, title: 待定（暫定）, status: planned, date: , article: , projects: []}
 
