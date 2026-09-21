@@ -145,7 +145,26 @@ days:
         tag: v0.35.1-3
         sha: "3ba00139ac903f9b38a59512b81c2b9d061dfa17"
         paths: [docs/HARDWARE-NOTES.md]
-  - {day: 8, part: 1, category: packaging, title: 案例 Open WebUI 加 Ollama（暫定）, status: planned, date: , article: , projects: []}
+  - day: 8
+    part: 1
+    category: packaging
+    title: 案例 Open WebUI 加 Ollama：回到範本的來源，一個專案繞一圈之後剩下什麼
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/open-webui-ollama-qpkg
+        tag: v1.0.8
+        sha: "7e92b578a882d132533d87096fb33283cef7def1"
+        paths: [shared/openwebui-ollama.sh]
+      - repo: ivanusto/open-webui-ollama-qpkg
+        tag: v2.0.0
+        sha: "db1897cc978ebdcb498e7032db4ed3224ed2ff88"
+        paths: [shared/openwebui-ollama.sh, shared/openwebui-ollama.conf.default, shared/images.lock, tests/lifecycle.sh, CHANGELOG.md, NOTICE.md]
+      - repo: ivanusto/qpkg-template
+        tag: v0.2.1
+        sha: "68df65f6f111972b8c317491ada93d4888bef9e9"
+        paths: [shared/lib/qpkg-core.sh, tests/lifecycle.sh, CHANGELOG.md]
 
   # ---- 第二段：容量規劃、GPU 節點、儲存與備份 ----
   - {day: 9, part: 2, category: node-guard, title: 容量規劃：模型與硬體搭配矩陣（暫定）, status: planned, date: , article: , projects: []}
