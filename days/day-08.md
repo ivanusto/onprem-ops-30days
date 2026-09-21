@@ -1,5 +1,5 @@
 <!-- DAY:START -->
-# Day 08：待定（暫定）
+# Day 08：案例 Open WebUI 加 Ollama（暫定）
 
 - 狀態：即將發表
 - 類別：`packaging`

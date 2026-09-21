@@ -129,8 +129,23 @@ days:
         sha: "abb110d329ca9a619858a732c4c1e2d72463ec60"
         paths: [shared/lib/qpkg-core.sh, shared/myapp.sh, tests/lifecycle.sh, package_routines]
 
-  - {day: 7, part: 1, category: packaging, title: ComfyUI 封裝（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 8, part: 1, category: packaging, title: 待定（暫定）, status: planned, date: , article: , projects: []}
+  - day: 7
+    part: 1
+    category: packaging
+    title: 案例 ComfyUI：自建 image 的版本鎖定、GPU 直通與資料目錄的三層分離
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/qnap-comfyui-qpkg
+        tag: v0.35.1-2
+        sha: "d4c4334145c782cb44a435e8d4c511c08bca42e4"
+        paths: [qpkg/shared/Dockerfile, qpkg/shared/entrypoint.sh, qpkg/shared/ComfyUI.sh, qpkg/shared/docker-compose.yml, qpkg/package_routines]
+      - repo: ivanusto/qnap-comfyui-qpkg
+        tag: v0.35.1-3
+        sha: "3ba00139ac903f9b38a59512b81c2b9d061dfa17"
+        paths: [docs/HARDWARE-NOTES.md]
+  - {day: 8, part: 1, category: packaging, title: 案例 Open WebUI 加 Ollama（暫定）, status: planned, date: , article: , projects: []}
 
   # ---- 第二段：容量規劃、GPU 節點、儲存與備份 ----
   - {day: 9, part: 2, category: node-guard, title: 容量規劃：模型與硬體搭配矩陣（暫定）, status: planned, date: , article: , projects: []}
