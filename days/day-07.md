@@ -1,7 +1,9 @@
 <!-- DAY:START -->
-# Day 07：案例 ComfyUI：自建 image 的版本鎖定、GPU 直通與資料目錄的三層分離
+# Day 07：在地自建 ComfyUI 的生存指南：自建 Image 鎖定、GPU 直通與三層目錄架構
 
-- 狀態：撰寫中
+- 狀態：已發表
+- 發表日期：2026-09-21
+- 文章：https://ithelp.ithome.com.tw/articles/10415007
 - 類別：`packaging`
 
 | 專案 | tag | commit | 重點檔案 |

@@ -132,10 +132,10 @@ days:
   - day: 7
     part: 1
     category: packaging
-    title: 案例 ComfyUI：自建 image 的版本鎖定、GPU 直通與資料目錄的三層分離
-    status: draft
-    date:
-    article:
+    title: 在地自建 ComfyUI 的生存指南：自建 Image 鎖定、GPU 直通與三層目錄架構
+    status: published
+    date: 2026-09-21
+    article: https://ithelp.ithome.com.tw/articles/10415007
     projects:
       - repo: ivanusto/qnap-comfyui-qpkg
         tag: v0.35.1-2
