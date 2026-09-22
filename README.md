@@ -42,7 +42,7 @@
 
 | Day | 主題 | 類別 | 文章 | 程式碼 |
 |---:|---|---|---|---|
-| [09](days/day-09.md) | 容量規劃：模型與硬體搭配矩陣（暫定） | `node-guard` | 即將發表 |   |
+| [09](days/day-09.md) | 容量規劃：用模型與硬體搭配矩陣決定地端節點與儲存規格 | `node-guard` | 撰寫中 | [open-model-selector](https://github.com/ivanusto/open-model-selector) |
 | [10](days/day-10.md) | DGX Spark 節點基線（暫定） | `node-guard` | 即將發表 |   |
 | [11](days/day-11.md) | 熱與記憶體守護（暫定） | `node-guard` | 即將發表 |   |
 | [12](days/day-12.md) | NFS 集中模型庫的權限與版本治理（暫定） | `storage-backup` | 即將發表 |   |

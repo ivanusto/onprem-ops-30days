@@ -167,7 +167,17 @@ days:
         paths: [shared/lib/qpkg-core.sh, tests/lifecycle.sh, CHANGELOG.md]
 
   # ---- 第二段：容量規劃、GPU 節點、儲存與備份 ----
-  - {day: 9, part: 2, category: node-guard, title: 容量規劃：模型與硬體搭配矩陣（暫定）, status: planned, date: , article: , projects: []}
+  - day: 9
+    part: 2
+    category: node-guard
+    title: 容量規劃：用模型與硬體搭配矩陣決定地端節點與儲存規格
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/open-model-selector
+        sha: "03f126f28c56580c053a6c1293f0c6b32028f14d"
+        paths: [data.js, app.js]
   - {day: 10, part: 2, category: node-guard, title: DGX Spark 節點基線（暫定）, status: planned, date: , article: , projects: []}
   - {day: 11, part: 2, category: node-guard, title: 熱與記憶體守護（暫定）, status: planned, date: , article: , projects: []}
   - {day: 12, part: 2, category: storage-backup, title: NFS 集中模型庫的權限與版本治理（暫定）, status: planned, date: , article: , projects: []}
