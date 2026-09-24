@@ -6,7 +6,7 @@
 
 | 專案 | tag | commit | 重點檔案 |
 |---|---|---|---|
-| [ivanusto/spark-baseline](https://github.com/ivanusto/spark-baseline) |   | `6803b14` | [baseline-snapshot.sh](https://github.com/ivanusto/spark-baseline/tree/6803b14179b924f3d2da1e8960c3187a9cdfc806/baseline-snapshot.sh)<br>[harden-ssh.sh](https://github.com/ivanusto/spark-baseline/tree/6803b14179b924f3d2da1e8960c3187a9cdfc806/harden-ssh.sh)<br>[10-hardening.conf](https://github.com/ivanusto/spark-baseline/tree/6803b14179b924f3d2da1e8960c3187a9cdfc806/10-hardening.conf) |
+| [ivanusto/spark-baseline](https://github.com/ivanusto/spark-baseline) | [v0.1.0](https://github.com/ivanusto/spark-baseline/tree/v0.1.0) | `efe44e0` | [baseline-snapshot.sh](https://github.com/ivanusto/spark-baseline/tree/efe44e04723769c9c24bf752addddf52e23adb01/baseline-snapshot.sh)<br>[harden-ssh.sh](https://github.com/ivanusto/spark-baseline/tree/efe44e04723769c9c24bf752addddf52e23adb01/harden-ssh.sh)<br>[10-hardening.conf](https://github.com/ivanusto/spark-baseline/tree/efe44e04723769c9c24bf752addddf52e23adb01/10-hardening.conf) |
 <!-- DAY:END -->
 
 ## 摘要

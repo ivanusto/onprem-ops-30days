@@ -6,7 +6,7 @@
 
 | 專案 | tag | commit | 重點檔案 |
 |---|---|---|---|
-| [ivanusto/dsv41-flash-vllm030-2x-gb10](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10) |   | `9d882b3` | [patches](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/9d882b32fe3115de272714ac71943dab0759476d/patches)<br>[files](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/9d882b32fe3115de272714ac71943dab0759476d/files)<br>[RESULTS.md](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/9d882b32fe3115de272714ac71943dab0759476d/RESULTS.md)<br>[NOTICE](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/9d882b32fe3115de272714ac71943dab0759476d/NOTICE) |
+| [ivanusto/dsv41-flash-vllm030-2x-gb10](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10) | [v0.1.0](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/v0.1.0) | `9d882b3` | [patches](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/9d882b32fe3115de272714ac71943dab0759476d/patches)<br>[files](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/9d882b32fe3115de272714ac71943dab0759476d/files)<br>[RESULTS.md](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/9d882b32fe3115de272714ac71943dab0759476d/RESULTS.md)<br>[NOTICE](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/9d882b32fe3115de272714ac71943dab0759476d/NOTICE) |
 <!-- DAY:END -->
 
 ## 摘要

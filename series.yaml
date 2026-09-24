@@ -187,6 +187,7 @@ days:
     article:
     projects:
       - repo: ivanusto/dsv41-flash-vllm030-2x-gb10
+        tag: v0.1.0
         sha: "9d882b32fe3115de272714ac71943dab0759476d"
         paths: [patches, files, RESULTS.md, NOTICE]
   - day: 11
@@ -198,7 +199,8 @@ days:
     article:
     projects:
       - repo: ivanusto/spark-baseline
-        sha: "6803b14179b924f3d2da1e8960c3187a9cdfc806"
+        tag: v0.1.0
+        sha: "efe44e04723769c9c24bf752addddf52e23adb01"
         paths: [baseline-snapshot.sh, harden-ssh.sh, 10-hardening.conf]
   - {day: 12, part: 2, category: node-guard, title: 熱與統一記憶體守護：取樣器、自動降載與長時間負載實測（暫定）, status: planned, date: , article: , projects: []}
   - {day: 13, part: 2, category: storage-backup, title: NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定）, status: planned, date: , article: , projects: []}
