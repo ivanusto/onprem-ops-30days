@@ -1,7 +1,9 @@
 <!-- DAY:START -->
 # Day 11：DGX Spark 節點基線：DGX OS 初始設定、帳號與 SSH 加固
 
-- 狀態：撰寫中
+- 狀態：已發表
+- 發表日期：2026-09-25
+- 文章：https://ithelp.ithome.com.tw/articles/10416687
 - 類別：`node-guard`
 
 | 專案 | tag | commit | 重點檔案 |

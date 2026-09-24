@@ -194,9 +194,9 @@ days:
     part: 2
     category: node-guard
     title: DGX Spark 節點基線：DGX OS 初始設定、帳號與 SSH 加固
-    status: draft
-    date:
-    article:
+    status: published
+    date: 2026-09-25
+    article: https://ithelp.ithome.com.tw/articles/10416687
     projects:
       - repo: ivanusto/spark-baseline
         tag: v0.1.0
