@@ -1,7 +1,9 @@
 <!-- DAY:START -->
-# Day 08：案例 Open WebUI 加 Ollama：回到範本的來源，一個專案繞一圈之後剩下什麼
+# Day 08：案例實戰：Open WebUI + Ollama 重構記，把專案回到通用框架會省下什麼呢？
 
-- 狀態：撰寫中
+- 狀態：已發表
+- 發表日期：2026-09-22
+- 文章：https://ithelp.ithome.com.tw/articles/10415241
 - 類別：`packaging`
 
 | 專案 | tag | commit | 重點檔案 |
