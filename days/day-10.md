@@ -1,7 +1,9 @@
 <!-- DAY:START -->
-# Day 10：上游引擎一改版，社群配方就壞了：一次補丁移植的完整變更紀錄
+# Day 10：上游引擎一改版，地端 AI 環境用的配方壞了怎麼辦 ? patch 移植實戰紀錄
 
-- 狀態：撰寫中
+- 狀態：已發表
+- 發表日期：2026-09-24
+- 文章：https://ithelp.ithome.com.tw/articles/10415860
 - 類別：`change-mgmt`
 
 | 專案 | tag | commit | 重點檔案 |
