@@ -43,15 +43,15 @@
 | Day | 主題 | 類別 | 文章 | 程式碼 |
 |---:|---|---|---|---|
 | [09](days/day-09.md) | 容量規劃：用模型與硬體搭配矩陣決定地端節點與儲存規格 | `node-guard` | 撰寫中 | [open-model-selector](https://github.com/ivanusto/open-model-selector) |
-| [10](days/day-10.md) | DGX Spark 節點基線（暫定） | `node-guard` | 即將發表 |   |
-| [11](days/day-11.md) | 熱與記憶體守護（暫定） | `node-guard` | 即將發表 |   |
-| [12](days/day-12.md) | NFS 集中模型庫的權限與版本治理（暫定） | `storage-backup` | 即將發表 |   |
-| [13](days/day-13.md) | 儲存路徑實測（暫定） | `storage-backup` | 即將發表 |   |
-| [14](days/day-14.md) | Proxmox VE 雙節點 HA（暫定） | `storage-backup` | 即將發表 |   |
-| [15](days/day-15.md) | Proxmox VE 備份與還原演練（暫定） | `storage-backup` | 即將發表 |   |
-| [16](days/day-16.md) | NAS 快照（暫定） | `storage-backup` | 即將發表 |   |
-| [17](days/day-17.md) | 3-2-1 備份（暫定） | `storage-backup` | 即將發表 |   |
-| [18](days/day-18.md) | 媒體庫外移 GCS 與 S3（暫定） | `storage-backup` | 即將發表 |   |
+| [10](days/day-10.md) | 上游引擎一改版，社群配方就壞了：一次補丁移植的完整變更紀錄 | `change-mgmt` | 撰寫中 | [dsv41-flash-vllm030-2x-gb10](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10) |
+| [11](days/day-11.md) | DGX Spark 節點基線：DGX OS 初始設定、帳號與 SSH 加固 | `node-guard` | 撰寫中 | [spark-baseline](https://github.com/ivanusto/spark-baseline) |
+| [12](days/day-12.md) | 熱與統一記憶體守護：取樣器、自動降載與長時間負載實測（暫定） | `node-guard` | 即將發表 |   |
+| [13](days/day-13.md) | NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定） | `storage-backup` | 即將發表 |   |
+| [14](days/day-14.md) | 儲存規劃與路徑實測：RAID 試算，SSD、NFS、iSCSI 載入時間（暫定） | `storage-backup` | 即將發表 |   |
+| [15](days/day-15.md) | Proxmox VE 雙節點 HA：QNAP Virtualization Station 上的 QDevice（暫定） | `storage-backup` | 即將發表 |   |
+| [16](days/day-16.md) | Proxmox VE 備份與還原：justbackup 的排程、保留與還原流程（暫定） | `storage-backup` | 即將發表 |   |
+| [17](days/day-17.md) | NAS 備份策略與還原演練：快照、HBS3、3-2-1 與計時紀錄（暫定） | `storage-backup` | 即將發表 |   |
+| [18](days/day-18.md) | 雲地整合：媒體庫外移 GCS 與 S3，異地副本與成本（暫定） | `storage-backup` | 即將發表 |   |
 
 ### 第三段：可觀測性、資安維運與可稽核的變更管理
 

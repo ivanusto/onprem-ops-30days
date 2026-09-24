@@ -166,7 +166,7 @@ days:
         sha: "68df65f6f111972b8c317491ada93d4888bef9e9"
         paths: [shared/lib/qpkg-core.sh, tests/lifecycle.sh, CHANGELOG.md]
 
-  # ---- 第二段：容量規劃、GPU 節點、儲存與備份 ----
+  # ---- 第二段：容量規劃、GPU 節點、儲存與備份（Day 10 插入補丁移植案例，Day 16 與 17 合併，第三段不動）----
   - day: 9
     part: 2
     category: node-guard
@@ -178,15 +178,35 @@ days:
       - repo: ivanusto/open-model-selector
         sha: "03f126f28c56580c053a6c1293f0c6b32028f14d"
         paths: [data.js, app.js]
-  - {day: 10, part: 2, category: node-guard, title: DGX Spark 節點基線（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 11, part: 2, category: node-guard, title: 熱與記憶體守護（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 12, part: 2, category: storage-backup, title: NFS 集中模型庫的權限與版本治理（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 13, part: 2, category: storage-backup, title: 儲存路徑實測（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 14, part: 2, category: storage-backup, title: Proxmox VE 雙節點 HA（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 15, part: 2, category: storage-backup, title: Proxmox VE 備份與還原演練（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 16, part: 2, category: storage-backup, title: NAS 快照（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 17, part: 2, category: storage-backup, title: 3-2-1 備份（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 18, part: 2, category: storage-backup, title: 媒體庫外移 GCS 與 S3（暫定）, status: planned, date: , article: , projects: []}
+  - day: 10
+    part: 2
+    category: change-mgmt
+    title: 上游引擎一改版，社群配方就壞了：一次補丁移植的完整變更紀錄
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/dsv41-flash-vllm030-2x-gb10
+        sha: "9d882b32fe3115de272714ac71943dab0759476d"
+        paths: [patches, files, RESULTS.md, NOTICE]
+  - day: 11
+    part: 2
+    category: node-guard
+    title: DGX Spark 節點基線：DGX OS 初始設定、帳號與 SSH 加固
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/spark-baseline
+        sha: "6803b14179b924f3d2da1e8960c3187a9cdfc806"
+        paths: [baseline-snapshot.sh, harden-ssh.sh, 10-hardening.conf]
+  - {day: 12, part: 2, category: node-guard, title: 熱與統一記憶體守護：取樣器、自動降載與長時間負載實測（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 13, part: 2, category: storage-backup, title: NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 14, part: 2, category: storage-backup, title: 儲存規劃與路徑實測：RAID 試算，SSD、NFS、iSCSI 載入時間（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 15, part: 2, category: storage-backup, title: Proxmox VE 雙節點 HA：QNAP Virtualization Station 上的 QDevice（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 16, part: 2, category: storage-backup, title: Proxmox VE 備份與還原：justbackup 的排程、保留與還原流程（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 17, part: 2, category: storage-backup, title: NAS 備份策略與還原演練：快照、HBS3、3-2-1 與計時紀錄（暫定）, status: planned, date: , article: , projects: []}
+  - {day: 18, part: 2, category: storage-backup, title: 雲地整合：媒體庫外移 GCS 與 S3，異地副本與成本（暫定）, status: planned, date: , article: , projects: []}
 
   # ---- 第三段：可觀測性、資安維運與可稽核的變更管理 ----
   - {day: 19, part: 3, category: node-guard, title: 指標收集（暫定）, status: planned, date: , article: , projects: []}

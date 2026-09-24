@@ -1,5 +1,5 @@
 <!-- DAY:START -->
-# Day 15：Proxmox VE 備份與還原演練（暫定）
+# Day 15：Proxmox VE 雙節點 HA：QNAP Virtualization Station 上的 QDevice（暫定）
 
 - 狀態：即將發表
 - 類別：`storage-backup`
