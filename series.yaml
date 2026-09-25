@@ -203,7 +203,26 @@ days:
         tag: v0.1.0
         sha: "efe44e04723769c9c24bf752addddf52e23adb01"
         paths: [baseline-snapshot.sh, harden-ssh.sh, 10-hardening.conf]
-  - {day: 12, part: 2, category: node-guard, title: 熱與統一記憶體守護：取樣器、自動降載與長時間負載實測（暫定）, status: planned, date: , article: , projects: []}
+  - day: 12
+    part: 2
+    category: node-guard
+    title: 熱與統一記憶體守護：取樣器、自動降載與長時間負載實測
+    status: published
+    date: 2026-09-26
+    article: https://ithelp.ithome.com.tw/articles/10416943
+    projects:
+      - repo: ivanusto/gb10-ops
+        tag: v0.1.0
+        sha: "5aa8b2292420c554c2aa4e5fbb6e02f8430fda3d"
+        paths: [guards/gb10-host-guard.py, guards/thermal-run.py, guards/thermal-guard-http.py, samplers/hw-sample.py, bench/summarize-samples.py]
+      - repo: ivanusto/gb10-ops
+        tag: v0.2.0
+        sha: "78d26f1e84bd0769508d8278c0bfd993c7b81306"
+        paths: [systemd/gb10-host-guard.service, systemd/gb10-host-guard.env]
+      - repo: ivanusto/spark-baseline
+        tag: v0.1.2
+        sha: "11fa1ce4721ae964f07c3b4f2ca817d85a4dcd64"
+        paths: [baseline-snapshot.sh]
   - {day: 13, part: 2, category: storage-backup, title: NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定）, status: planned, date: , article: , projects: []}
   - {day: 14, part: 2, category: storage-backup, title: 儲存規劃與路徑實測：RAID 試算，SSD、NFS、iSCSI 載入時間（暫定）, status: planned, date: , article: , projects: []}
   - {day: 15, part: 2, category: storage-backup, title: Proxmox VE 雙節點 HA：QNAP Virtualization Station 上的 QDevice（暫定）, status: planned, date: , article: , projects: []}
