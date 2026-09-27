@@ -226,12 +226,13 @@ days:
   - day: 13
     part: 2
     category: storage-backup
-    title: NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定）
-    status: draft
-    date:
-    article:
+    title: 別讓節點踩爆模型！NFS 集中模型庫的單寫多讀、權限凍結與完整性治理
+    status: published
+    date: 2026-09-27
+    article: https://ithelp.ithome.com.tw/articles/10417907
     projects:
       - repo: ivanusto/nfs-model-library
+        tag: v0.1.0
         sha: "64dec6f217d2c1fe0158086afd5f24eaf4a324c9"
         paths: [mlib.py, mounts.md, tests/test_mlib.py]
   - {day: 14, part: 2, category: storage-backup, title: 儲存規劃與路徑實測：RAID 試算，SSD、NFS、iSCSI 載入時間（暫定）, status: planned, date: , article: , projects: []}
