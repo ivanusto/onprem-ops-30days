@@ -223,7 +223,17 @@ days:
         tag: v0.1.2
         sha: "11fa1ce4721ae964f07c3b4f2ca817d85a4dcd64"
         paths: [baseline-snapshot.sh]
-  - {day: 13, part: 2, category: storage-backup, title: NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定）, status: planned, date: , article: , projects: []}
+  - day: 13
+    part: 2
+    category: storage-backup
+    title: NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定）
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/nfs-model-library
+        sha: "64dec6f217d2c1fe0158086afd5f24eaf4a324c9"
+        paths: [mlib.py, mounts.md, tests/test_mlib.py]
   - {day: 14, part: 2, category: storage-backup, title: 儲存規劃與路徑實測：RAID 試算，SSD、NFS、iSCSI 載入時間（暫定）, status: planned, date: , article: , projects: []}
   - {day: 15, part: 2, category: storage-backup, title: Proxmox VE 雙節點 HA：QNAP Virtualization Station 上的 QDevice（暫定）, status: planned, date: , article: , projects: []}
   - {day: 16, part: 2, category: storage-backup, title: Proxmox VE 備份與還原：justbackup 的排程、保留與還原流程（暫定）, status: planned, date: , article: , projects: []}

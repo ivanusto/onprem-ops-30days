@@ -46,7 +46,7 @@
 | [10](days/day-10.md) | 上游引擎一改版，地端 AI 環境用的配方壞了怎麼辦 ? patch 移植實戰紀錄 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10415860) | [dsv41-flash-vllm030-2x-gb10@v0.1.0](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/v0.1.0) |
 | [11](days/day-11.md) | DGX Spark 節點基線：DGX OS 初始設定、帳號與 SSH 加固 | `node-guard` | [閱讀](https://ithelp.ithome.com.tw/articles/10416687) | [spark-baseline@v0.1.0](https://github.com/ivanusto/spark-baseline/tree/v0.1.0) |
 | [12](days/day-12.md) | 熱與統一記憶體守護：取樣器、自動降載與長時間負載實測 | `node-guard` | [閱讀](https://ithelp.ithome.com.tw/articles/10416943) | [gb10-ops@v0.1.0](https://github.com/ivanusto/gb10-ops/tree/v0.1.0)<br>[gb10-ops@v0.2.0](https://github.com/ivanusto/gb10-ops/tree/v0.2.0)<br>[spark-baseline@v0.1.2](https://github.com/ivanusto/spark-baseline/tree/v0.1.2) |
-| [13](days/day-13.md) | NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定） | `storage-backup` | 即將發表 |   |
+| [13](days/day-13.md) | NFS 集中模型庫：目錄、權限、manifest、校驗碼與清理（暫定） | `storage-backup` | 撰寫中 | [nfs-model-library](https://github.com/ivanusto/nfs-model-library) |
 | [14](days/day-14.md) | 儲存規劃與路徑實測：RAID 試算，SSD、NFS、iSCSI 載入時間（暫定） | `storage-backup` | 即將發表 |   |
 | [15](days/day-15.md) | Proxmox VE 雙節點 HA：QNAP Virtualization Station 上的 QDevice（暫定） | `storage-backup` | 即將發表 |   |
 | [16](days/day-16.md) | Proxmox VE 備份與還原：justbackup 的排程、保留與還原流程（暫定） | `storage-backup` | 即將發表 |   |
