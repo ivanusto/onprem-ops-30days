@@ -235,7 +235,18 @@ days:
         tag: v0.1.0
         sha: "64dec6f217d2c1fe0158086afd5f24eaf4a324c9"
         paths: [mlib.py, mounts.md, tests/test_mlib.py]
-  - {day: 14, part: 2, category: storage-backup, title: 儲存規劃與路徑實測：RAID 試算，SSD、NFS、iSCSI 載入時間（暫定）, status: planned, date: , article: , projects: []}
+  - day: 14
+    part: 2
+    category: storage-backup
+    title: 儲存規劃與路徑實測：RAID 60 與 RAIDZ2 試算，SSD、NFS、iSCSI 載入時間解析
+    status: published
+    date: 2026-09-28
+    article: https://ithelp.ithome.com.tw/articles/10418365
+    projects:
+      - repo: ivanusto/storage-path-bench
+        tag: v0.1.0
+        sha: "5dd1c1d1a7a77e50f68cd1fae35da747409d55f3"
+        paths: [spb.py, README.md]
   - {day: 15, part: 2, category: storage-backup, title: Proxmox VE 雙節點 HA：QNAP Virtualization Station 上的 QDevice（暫定）, status: planned, date: , article: , projects: []}
   - {day: 16, part: 2, category: storage-backup, title: Proxmox VE 備份與還原：justbackup 的排程、保留與還原流程（暫定）, status: planned, date: , article: , projects: []}
   - {day: 17, part: 2, category: storage-backup, title: NAS 備份策略與還原演練：快照、HBS3、3-2-1 與計時紀錄（暫定）, status: planned, date: , article: , projects: []}
