@@ -49,7 +49,7 @@
 | [13](days/day-13.md) | 別讓節點踩爆模型！NFS 集中模型庫的單寫多讀、權限凍結與完整性治理 | `storage-backup` | [閱讀](https://ithelp.ithome.com.tw/articles/10417907) | [nfs-model-library@v0.1.0](https://github.com/ivanusto/nfs-model-library/tree/v0.1.0) |
 | [14](days/day-14.md) | 儲存規劃與路徑實測：RAID 60 與 RAIDZ2 試算，SSD、NFS、iSCSI 載入時間解析 | `storage-backup` | [閱讀](https://ithelp.ithome.com.tw/articles/10418365) | [storage-path-bench@v0.1.0](https://github.com/ivanusto/storage-path-bench/tree/v0.1.0) |
 | [15](days/day-15.md) | Proxmox VE 雙節點 HA：Virtualization Station 上的 QDevice | `storage-backup` | [閱讀](https://ithelp.ithome.com.tw/articles/10418960) | [pve-qdevice-on-qnap@v0.1.0](https://github.com/ivanusto/pve-qdevice-on-qnap/tree/v0.1.0) |
-| [16](days/day-16.md) | Proxmox VE 備份與還原：justbackup 的排程、保留與還原流程（暫定） | `storage-backup` | 即將發表 |   |
+| [16](days/day-16.md) | Proxmox VE 備份與還原：HDP for Business Beta 的排程、保留與還原演練 | `storage-backup` | [閱讀](https://ithelp.ithome.com.tw/articles/10419424) | [pve-backup-drill@v0.1.0](https://github.com/ivanusto/pve-backup-drill/tree/v0.1.0) |
 | [17](days/day-17.md) | NAS 備份策略與還原演練：快照、HBS3、3-2-1 與計時紀錄（暫定） | `storage-backup` | 即將發表 |   |
 | [18](days/day-18.md) | 雲地整合：媒體庫外移 GCS 與 S3，異地副本與成本（暫定） | `storage-backup` | 即將發表 |   |
 
