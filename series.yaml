@@ -271,8 +271,19 @@ days:
         tag: v0.1.0
         sha: "59b4def1ee8821f98f9d9299da2082f8876a2665"
         paths: [canary.sh, restore-drill.sh, policy.md, drill-log.md]
-  - {day: 17, part: 2, category: storage-backup, title: NAS 備份策略與還原演練：快照、HBS3、3-2-1 與計時紀錄（暫定）, status: planned, date: , article: , projects: []}
-  - {day: 18, part: 2, category: storage-backup, title: 雲地整合：媒體庫外移 GCS 與 S3，異地副本與成本（暫定）, status: planned, date: , article: , projects: []}
+  - day: 17
+    part: 2
+    category: storage-backup
+    title: 儲存設備備份策略與還原演練：快照、HBS 3 與 3-2-1 備份策略
+    status: published
+    date: 2026-10-01
+    article: https://ithelp.ithome.com.tw/articles/10419887
+    projects:
+      - repo: ivanusto/nas-backup-drill
+        tag: v0.1.0
+        sha: "543850bb8c28d52c64e4d0dc78096382516053ac"
+        paths: [nas-audit.sh, share-canary.sh, replica-verify.sh, restore-drill.sh, policy.md, drill-log.md, outage-checklist.md]
+  - {day: 18, part: 2, category: storage-backup, title: 3-2-1 的最後一步：異地物件儲存、保留政策與冷熱資料成本精算, status: draft, date: , article: , projects: []}
 
   # ---- 第三段：可觀測性、資安維運與可稽核的變更管理 ----
   - {day: 19, part: 3, category: node-guard, title: 指標收集（暫定）, status: planned, date: , article: , projects: []}
