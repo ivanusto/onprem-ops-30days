@@ -51,7 +51,7 @@
 | [15](days/day-15.md) | Proxmox VE 雙節點 HA：Virtualization Station 上的 QDevice | `storage-backup` | [閱讀](https://ithelp.ithome.com.tw/articles/10418960) | [pve-qdevice-on-qnap@v0.1.0](https://github.com/ivanusto/pve-qdevice-on-qnap/tree/v0.1.0) |
 | [16](days/day-16.md) | Proxmox VE 備份與還原：HDP for Business Beta 的排程、保留與還原演練 | `storage-backup` | [閱讀](https://ithelp.ithome.com.tw/articles/10419424) | [pve-backup-drill@v0.1.0](https://github.com/ivanusto/pve-backup-drill/tree/v0.1.0) |
 | [17](days/day-17.md) | 儲存設備備份策略與還原演練：快照、HBS 3 與 3-2-1 備份策略 | `storage-backup` | [閱讀](https://ithelp.ithome.com.tw/articles/10419887) | [nas-backup-drill@v0.1.0](https://github.com/ivanusto/nas-backup-drill/tree/v0.1.0) |
-| [18](days/day-18.md) | 3-2-1 的最後一步：異地物件儲存、保留政策與冷熱資料成本精算 | `storage-backup` | 撰寫中 |   |
+| [18](days/day-18.md) | 3-2-1 的最後一步：異地物件儲存、保留政策與冷熱資料成本精算 | `storage-backup` | [閱讀](https://ithelp.ithome.com.tw/articles/10420047) | [cloud-offload-drill@v0.1.0](https://github.com/ivanusto/cloud-offload-drill/tree/v0.1.0) |
 
 ### 第三段：可觀測性、資安維運與可稽核的變更管理
 

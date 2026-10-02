@@ -283,7 +283,18 @@ days:
         tag: v0.1.0
         sha: "543850bb8c28d52c64e4d0dc78096382516053ac"
         paths: [nas-audit.sh, share-canary.sh, replica-verify.sh, restore-drill.sh, policy.md, drill-log.md, outage-checklist.md]
-  - {day: 18, part: 2, category: storage-backup, title: 3-2-1 的最後一步：異地物件儲存、保留政策與冷熱資料成本精算, status: draft, date: , article: , projects: []}
+  - day: 18
+    part: 2
+    category: storage-backup
+    title: 3-2-1 的最後一步：異地物件儲存、保留政策與冷熱資料成本精算
+    status: published
+    date: 2026-10-02
+    article: https://ithelp.ithome.com.tw/articles/10420047
+    projects:
+      - repo: ivanusto/cloud-offload-drill
+        tag: v0.1.0
+        sha: "9483e88d26ca2ff3f1dd074ea4b3204bb2c728a8"
+        paths: [offload-cost.py, offload-drill.sh, gcs-bucket.sh, s3-bucket.sh, hmac-rm-generation.py, policy.md, drill-log.md, redownload-plan.md]
 
   # ---- 第三段：可觀測性、資安維運與可稽核的變更管理 ----
   - {day: 19, part: 3, category: node-guard, title: 指標收集（暫定）, status: planned, date: , article: , projects: []}
