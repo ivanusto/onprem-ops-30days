@@ -1,8 +1,12 @@
 <!-- DAY:START -->
-# Day 20：Grafana 儀表板（暫定）
+# Day 20：儀表板與告警：一面板子回答六個問題，每個門檻寫明來源
 
-- 狀態：即將發表
+- 狀態：撰寫中
 - 類別：`node-guard`
+
+| 專案 | tag | commit | 重點檔案 |
+|---|---|---|---|
+| [ivanusto/onprem-metrics](https://github.com/ivanusto/onprem-metrics) | [v0.2.0](https://github.com/ivanusto/onprem-metrics/tree/v0.2.0) | `8e5cfdc` | [prometheus/rules/thresholds.yml](https://github.com/ivanusto/onprem-metrics/tree/8e5cfdc2d83557f77fcf8870e5b2e3c86f4a8d11/prometheus/rules/thresholds.yml)<br>[alertmanager/alertmanager.yml.example](https://github.com/ivanusto/onprem-metrics/tree/8e5cfdc2d83557f77fcf8870e5b2e3c86f4a8d11/alertmanager/alertmanager.yml.example)<br>[grafana/build-dashboard.py](https://github.com/ivanusto/onprem-metrics/tree/8e5cfdc2d83557f77fcf8870e5b2e3c86f4a8d11/grafana/build-dashboard.py)<br>[grafana/dashboards/onprem-overview.json](https://github.com/ivanusto/onprem-metrics/tree/8e5cfdc2d83557f77fcf8870e5b2e3c86f4a8d11/grafana/dashboards/onprem-overview.json)<br>[textfile/pve-quorum-textfile.sh](https://github.com/ivanusto/onprem-metrics/tree/8e5cfdc2d83557f77fcf8870e5b2e3c86f4a8d11/textfile/pve-quorum-textfile.sh)<br>[tests/rules_test.yml](https://github.com/ivanusto/onprem-metrics/tree/8e5cfdc2d83557f77fcf8870e5b2e3c86f4a8d11/tests/rules_test.yml)<br>[docker-compose.yml](https://github.com/ivanusto/onprem-metrics/tree/8e5cfdc2d83557f77fcf8870e5b2e3c86f4a8d11/docker-compose.yml) |
 <!-- DAY:END -->
 
 ## 摘要
