@@ -297,7 +297,18 @@ days:
         paths: [offload-cost.py, offload-drill.sh, gcs-bucket.sh, s3-bucket.sh, hmac-rm-generation.py, policy.md, drill-log.md, redownload-plan.md]
 
   # ---- 第三段：可觀測性、資安維運與可稽核的變更管理 ----
-  - {day: 19, part: 3, category: node-guard, title: 指標收集（暫定）, status: planned, date: , article: , projects: []}
+  - day: 19
+    part: 3
+    category: node-guard
+    title: 指標收集：把前十八天的取樣器接進同一個時間序列
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/onprem-metrics
+        tag: v0.1.0
+        sha: "baee929853d2fb157fbc913096676b501830b582"
+        paths: [textfile/gb10-textfile.py, textfile/nas-textfile.sh, textfile/drills-textfile.py, prometheus/snmp-build.py, prometheus/prometheus.yml, prometheus/rules/staleness.yml, docker-compose.yml, install-node.sh, verify.sh]
   - {day: 20, part: 3, category: node-guard, title: Grafana 儀表板（暫定）, status: planned, date: , article: , projects: []}
   - {day: 21, part: 3, category: change-mgmt, title: 日誌集中與保存（暫定）, status: planned, date: , article: , projects: []}
   - {day: 22, part: 3, category: change-mgmt, title: 防火牆日誌判讀（暫定）, status: planned, date: , article: , projects: []}
