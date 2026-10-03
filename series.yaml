@@ -301,9 +301,9 @@ days:
     part: 3
     category: node-guard
     title: 指標收集：把前十八天的取樣器接進同一個時間序列
-    status: draft
-    date:
-    article:
+    status: published
+    date: 2026-10-03
+    article: https://ithelp.ithome.com.tw/articles/10420423
     projects:
       - repo: ivanusto/onprem-metrics
         tag: v0.1.0

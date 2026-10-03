@@ -57,7 +57,7 @@
 
 | Day | 主題 | 類別 | 文章 | 程式碼 |
 |---:|---|---|---|---|
-| [19](days/day-19.md) | 指標收集：把前十八天的取樣器接進同一個時間序列 | `node-guard` | 撰寫中 | [onprem-metrics@v0.1.0](https://github.com/ivanusto/onprem-metrics/tree/v0.1.0) |
+| [19](days/day-19.md) | 指標收集：把前十八天的取樣器接進同一個時間序列 | `node-guard` | [閱讀](https://ithelp.ithome.com.tw/articles/10420423) | [onprem-metrics@v0.1.0](https://github.com/ivanusto/onprem-metrics/tree/v0.1.0) |
 | [20](days/day-20.md) | Grafana 儀表板（暫定） | `node-guard` | 即將發表 |   |
 | [21](days/day-21.md) | 日誌集中與保存（暫定） | `change-mgmt` | 即將發表 |   |
 | [22](days/day-22.md) | 防火牆日誌判讀（暫定） | `change-mgmt` | 即將發表 |   |

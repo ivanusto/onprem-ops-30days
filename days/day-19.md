@@ -1,7 +1,9 @@
 <!-- DAY:START -->
 # Day 19：指標收集：把前十八天的取樣器接進同一個時間序列
 
-- 狀態：撰寫中
+- 狀態：已發表
+- 發表日期：2026-10-03
+- 文章：https://ithelp.ithome.com.tw/articles/10420423
 - 類別：`node-guard`
 
 | 專案 | tag | commit | 重點檔案 |
