@@ -312,10 +312,10 @@ days:
   - day: 20
     part: 3
     category: node-guard
-    title: 儀表板與告警：一面板子回答六個問題，每個門檻寫明來源
-    status: draft
-    date:
-    article:
+    title: 儀表板與告警，打造一個簡潔的單一面板
+    status: published
+    date: 2026-10-04
+    article: https://ithelp.ithome.com.tw/articles/10420707
     projects:
       - repo: ivanusto/onprem-metrics
         tag: v0.2.0
