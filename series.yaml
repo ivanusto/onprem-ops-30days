@@ -321,7 +321,22 @@ days:
         tag: v0.2.0
         sha: "8e5cfdc2d83557f77fcf8870e5b2e3c86f4a8d11"
         paths: [prometheus/rules/thresholds.yml, alertmanager/alertmanager.yml.example, grafana/build-dashboard.py, grafana/dashboards/onprem-overview.json, textfile/pve-quorum-textfile.sh, tests/rules_test.yml, docker-compose.yml]
-  - {day: 21, part: 3, category: change-mgmt, title: 日誌集中與保存（暫定）, status: planned, date: , article: , projects: []}
+  - day: 21
+    part: 3
+    category: change-mgmt
+    title: 日誌集中與保存：節點不裝新代理，封存要能比對
+    status: published
+    date: 2026-10-05
+    article: https://ithelp.ithome.com.tw/articles/10421371
+    projects:
+      - repo: ivanusto/onprem-logs
+        tag: v0.1.0
+        sha: "65d55e46075580d4121e07006f67ed955d662618"
+        paths: [docker-compose.yml, node/install-journal-upload.sh, collector/docker-user-allowlist.sh, archive/archive-day.sh, archive/verify-archive.sh, grafana/Dockerfile, nas/qulog-log-sender.md, queries.md, retention.md]
+      - repo: ivanusto/onprem-metrics
+        tag: v0.2.1
+        sha: "7fb305409fa371dbde5ffdcbdafdbfcdc64d6f1a"
+        paths: [docker-compose.yml, systemd/gb10-textfile.service, systemd/collector.cron, textfile/drills-textfile.py]
   - {day: 22, part: 3, category: change-mgmt, title: 防火牆日誌判讀（暫定）, status: planned, date: , article: , projects: []}
   - {day: 23, part: 3, category: change-mgmt, title: 網路封包擷取與分析（暫定）, status: planned, date: , article: , projects: []}
   - {day: 24, part: 3, category: change-mgmt, title: 維運工作站（暫定）, status: planned, date: , article: , projects: []}

@@ -59,7 +59,7 @@
 |---:|---|---|---|---|
 | [19](days/day-19.md) | 指標收集：把前十八天的取樣器接進同一個時間序列 | `node-guard` | [閱讀](https://ithelp.ithome.com.tw/articles/10420423) | [onprem-metrics@v0.1.0](https://github.com/ivanusto/onprem-metrics/tree/v0.1.0) |
 | [20](days/day-20.md) | 儀表板與告警，打造一個簡潔的單一面板 | `node-guard` | [閱讀](https://ithelp.ithome.com.tw/articles/10420707) | [onprem-metrics@v0.2.0](https://github.com/ivanusto/onprem-metrics/tree/v0.2.0) |
-| [21](days/day-21.md) | 日誌集中與保存（暫定） | `change-mgmt` | 即將發表 |   |
+| [21](days/day-21.md) | 日誌集中與保存：節點不裝新代理，封存要能比對 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10421371) | [onprem-logs@v0.1.0](https://github.com/ivanusto/onprem-logs/tree/v0.1.0)<br>[onprem-metrics@v0.2.1](https://github.com/ivanusto/onprem-metrics/tree/v0.2.1) |
 | [22](days/day-22.md) | 防火牆日誌判讀（暫定） | `change-mgmt` | 即將發表 |   |
 | [23](days/day-23.md) | 網路封包擷取與分析（暫定） | `change-mgmt` | 即將發表 |   |
 | [24](days/day-24.md) | 維運工作站（暫定） | `change-mgmt` | 即將發表 |   |
