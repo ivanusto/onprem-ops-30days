@@ -337,7 +337,22 @@ days:
         tag: v0.2.1
         sha: "7fb305409fa371dbde5ffdcbdafdbfcdc64d6f1a"
         paths: [docker-compose.yml, systemd/gb10-textfile.service, systemd/collector.cron, textfile/drills-textfile.py]
-  - {day: 22, part: 3, category: change-mgmt, title: 防火牆日誌判讀（暫定）, status: planned, date: , article: , projects: []}
+  - day: 22
+    part: 3
+    category: change-mgmt
+    title: 被擋下的封包才是便宜情報：從防火牆靜默盲點到日誌降噪與自動化告警
+    status: published
+    date: 2026-10-06
+    article: https://ithelp.ithome.com.tw/articles/10421745
+    projects:
+      - repo: ivanusto/onprem-logs
+        tag: v0.2.0
+        sha: "384b3d6cf6ab036ffd528e57001fcb21f46a3921"
+        paths: [firewall/fw-report.py, firewall/queries.md, firewall/pve-firewall.md, firewall/pvefw-journal.service, firewall/collector-docker-user-log.md, firewall/collector.cron, collector/docker-user-allowlist.sh, archive/archive-day.sh, retention.md, tests/smoke-firewall.sh]
+      - repo: ivanusto/onprem-metrics
+        tag: v0.2.2
+        sha: "992902b0da858eb8270964617d2442ee5cfafc2d"
+        paths: [prometheus/rules/firewall.yml, tests/rules_test.yml, alertmanager/alertmanager.yml.example]
   - {day: 23, part: 3, category: change-mgmt, title: 網路封包擷取與分析（暫定）, status: planned, date: , article: , projects: []}
   - {day: 24, part: 3, category: change-mgmt, title: 維運工作站（暫定）, status: planned, date: , article: , projects: []}
   - {day: 25, part: 3, category: change-mgmt, title: 資產 EOL 監看（暫定）, status: planned, date: , article: , projects: []}
