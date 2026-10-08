@@ -353,7 +353,18 @@ days:
         tag: v0.2.2
         sha: "992902b0da858eb8270964617d2442ee5cfafc2d"
         paths: [prometheus/rules/firewall.yml, tests/rules_test.yml, alertmanager/alertmanager.yml.example]
-  - {day: 23, part: 3, category: change-mgmt, title: 網路封包擷取與分析（暫定）, status: planned, date: , article: , projects: []}
+  - day: 23
+    part: 3
+    category: change-mgmt
+    title: 日誌找不到原因？從 tcpdump 最小權限封包擷取到 WORM 封存的網路排錯實戰
+    status: published
+    date: 2026-10-07
+    article: https://ithelp.ithome.com.tw/articles/10422099
+    projects:
+      - repo: ivanusto/onprem-logs
+        tag: v0.3.0
+        sha: "9b8cb146672c0752f2486f1ac7606be69075af08"
+        paths: [pcap/README.md, pcap/install-pcap.sh, pcap/pcap@.service, pcap/pcap-run.sh, pcap/pcap-seal.sh, pcap/sudoers-pcap, pcap/pcap-pull.sh, pcap/pcap-stat.py, pcap/verify-pcap.sh, pcap/collector.cron, pcap/nas-capture.md, retention.md, tests/smoke-pcap.sh]
   - {day: 24, part: 3, category: change-mgmt, title: 維運工作站（暫定）, status: planned, date: , article: , projects: []}
   - {day: 25, part: 3, category: change-mgmt, title: 資產 EOL 監看（暫定）, status: planned, date: , article: , projects: []}
   - {day: 26, part: 3, category: change-mgmt, title: 變更管理（暫定）, status: planned, date: , article: , projects: []}
