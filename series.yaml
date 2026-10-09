@@ -385,7 +385,18 @@ days:
         tag: v0.1.0
         sha: "375f51e0ac4cc6b711f782e45f766a8738796bc5"
         paths: [README.md, src/utils/fortigateParser.js, src/utils/reverseDns.js, Dockerfile, tests/parser.test.mjs]
-  - {day: 25, part: 3, category: change-mgmt, title: 資產 EOL 監看（暫定）, status: planned, date: , article: , projects: []}
+  - day: 25
+    part: 3
+    category: change-mgmt
+    title: 資產生命週期與授權 EOL 監看：到期日只是一個數字，通通收進 Prometheus 時間序列！
+    status: published
+    date: 2026-10-09
+    article: https://ithelp.ithome.com.tw/articles/10422732
+    projects:
+      - repo: ivanusto/onprem-metrics
+        tag: v0.3.0
+        sha: "37af72beab0b25d377fdc0e8594a7e2a17c628bc"
+        paths: [eol/README.md, eol/assets.tsv, textfile/eol-textfile.py, prometheus/rules/eol.yml, tests/rules_eol_test.yml, tests/test_eol_textfile.py, grafana/build-dashboard.py, alertmanager/alertmanager.yml.example, systemd/collector.cron]
   - {day: 26, part: 3, category: change-mgmt, title: 變更管理（暫定）, status: planned, date: , article: , projects: []}
   - {day: 27, part: 3, category: change-mgmt, title: 稽核軌跡（暫定）, status: planned, date: , article: , projects: []}
   - {day: 28, part: 3, category: change-mgmt, title: 回滾與變更演練（暫定）, status: planned, date: , article: , projects: []}

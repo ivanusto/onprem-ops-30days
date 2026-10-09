@@ -63,7 +63,7 @@
 | [22](days/day-22.md) | 被擋下的封包才是便宜情報：從防火牆靜默盲點到日誌降噪與自動化告警 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10421745) | [onprem-logs@v0.2.0](https://github.com/ivanusto/onprem-logs/tree/v0.2.0)<br>[onprem-metrics@v0.2.2](https://github.com/ivanusto/onprem-metrics/tree/v0.2.2) |
 | [23](days/day-23.md) | 日誌找不到原因？從 tcpdump 最小權限封包擷取到 WORM 封存的網路排錯實戰 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10422099) | [onprem-logs@v0.3.0](https://github.com/ivanusto/onprem-logs/tree/v0.3.0) |
 | [24](days/day-24.md) | 稽核問「某台工作站上個月連到哪裡了」？FortiGate AUP 雙軌日誌實踐：線上 LogsQL 檢索與離線對帳修煉 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10422472) | [onprem-logs@v0.4.0](https://github.com/ivanusto/onprem-logs/tree/v0.4.0)<br>[onprem-metrics@v0.2.3](https://github.com/ivanusto/onprem-metrics/tree/v0.2.3)<br>[fortigate-log-viewer@v0.1.0](https://github.com/ivanusto/fortigate-log-viewer/tree/v0.1.0) |
-| [25](days/day-25.md) | 資產 EOL 監看（暫定） | `change-mgmt` | 即將發表 |   |
+| [25](days/day-25.md) | 資產生命週期與授權 EOL 監看：到期日只是一個數字，通通收進 Prometheus 時間序列！ | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10422732) | [onprem-metrics@v0.3.0](https://github.com/ivanusto/onprem-metrics/tree/v0.3.0) |
 | [26](days/day-26.md) | 變更管理（暫定） | `change-mgmt` | 即將發表 |   |
 | [27](days/day-27.md) | 稽核軌跡（暫定） | `change-mgmt` | 即將發表 |   |
 | [28](days/day-28.md) | 回滾與變更演練（暫定） | `change-mgmt` | 即將發表 |   |
