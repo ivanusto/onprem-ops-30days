@@ -365,7 +365,26 @@ days:
         tag: v0.3.0
         sha: "9b8cb146672c0752f2486f1ac7606be69075af08"
         paths: [pcap/README.md, pcap/install-pcap.sh, pcap/pcap@.service, pcap/pcap-run.sh, pcap/pcap-seal.sh, pcap/sudoers-pcap, pcap/pcap-pull.sh, pcap/pcap-stat.py, pcap/verify-pcap.sh, pcap/collector.cron, pcap/nas-capture.md, retention.md, tests/smoke-pcap.sh]
-  - {day: 24, part: 3, category: change-mgmt, title: 維運工作站（暫定）, status: planned, date: , article: , projects: []}
+  - day: 24
+    part: 3
+    category: change-mgmt
+    title: 稽核問「某台工作站上個月連到哪裡了」？FortiGate AUP 雙軌日誌實踐：線上 LogsQL 檢索與離線對帳修煉
+    status: published
+    date: 2026-10-08
+    article: https://ithelp.ithome.com.tw/articles/10422472
+    projects:
+      - repo: ivanusto/onprem-logs
+        tag: v0.4.0
+        sha: "429e606931cf88515e4b5524be8f994013e21d62"
+        paths: [firewall/fortigate-webfilter.md, firewall/aup-report.py, firewall/fortigate-export-load.py, firewall/aup-compare.sh, firewall/rules-aup.yml, firewall/collector.cron, retention.md, tests/smoke-aup.sh]
+      - repo: ivanusto/onprem-metrics
+        tag: v0.2.3
+        sha: "6718ef50074b1a9107f1b123d763c8f2be19b110"
+        paths: [prometheus/rules/aup.yml, tests/rules_aup_test.yml, alertmanager/alertmanager.yml.example]
+      - repo: ivanusto/fortigate-log-viewer
+        tag: v0.1.0
+        sha: "375f51e0ac4cc6b711f782e45f766a8738796bc5"
+        paths: [README.md, src/utils/fortigateParser.js, src/utils/reverseDns.js, Dockerfile, tests/parser.test.mjs]
   - {day: 25, part: 3, category: change-mgmt, title: 資產 EOL 監看（暫定）, status: planned, date: , article: , projects: []}
   - {day: 26, part: 3, category: change-mgmt, title: 變更管理（暫定）, status: planned, date: , article: , projects: []}
   - {day: 27, part: 3, category: change-mgmt, title: 稽核軌跡（暫定）, status: planned, date: , article: , projects: []}
