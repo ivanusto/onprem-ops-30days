@@ -397,7 +397,22 @@ days:
         tag: v0.3.0
         sha: "37af72beab0b25d377fdc0e8594a7e2a17c628bc"
         paths: [eol/README.md, eol/assets.tsv, textfile/eol-textfile.py, prometheus/rules/eol.yml, tests/rules_eol_test.yml, tests/test_eol_textfile.py, grafana/build-dashboard.py, alertmanager/alertmanager.yml.example, systemd/collector.cron]
-  - {day: 26, part: 3, category: change-mgmt, title: 變更管理（暫定）, status: planned, date: , article: , projects: []}
+  - day: 26
+    part: 3
+    category: change-mgmt
+    title: 變更管理實戰：串起 Git 變更單、監控與日誌，讓每次改動都有跡可循
+    status: published
+    date: 2026-10-10
+    article: https://ithelp.ithome.com.tw/articles/10423153
+    projects:
+      - repo: ivanusto/onprem-changes
+        tag: v0.1.0
+        sha: "5e5702670b3d98555e7c1837b7f053f0d50ef058"
+        paths: [changes/CR-2026-0001-qdevice-debian-13.md, changes/TEMPLATE.md, scripts/check.py, scripts/change-mark.sh, scripts/changes-textfile.py, scripts/render.py, prometheus/changes.yml, tests]
+      - repo: ivanusto/onprem-metrics
+        tag: v0.3.1
+        sha: "3e2315fbb79210107ecd790907abb3bd271e03ee"
+        paths: [prometheus/rules/changes.yml, tests/rules_changes_test.yml, alertmanager/alertmanager.yml.example, grafana/build-dashboard.py, eol/assets.tsv]
   - {day: 27, part: 3, category: change-mgmt, title: 稽核軌跡（暫定）, status: planned, date: , article: , projects: []}
   - {day: 28, part: 3, category: change-mgmt, title: 回滾與變更演練（暫定）, status: planned, date: , article: , projects: []}
   - {day: 29, part: 3, category: change-mgmt, title: AI Agent 進入維運流程的授權閘道（暫定）, status: planned, date: , article: , projects: []}
