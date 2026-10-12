@@ -413,7 +413,22 @@ days:
         tag: v0.3.1
         sha: "3e2315fbb79210107ecd790907abb3bd271e03ee"
         paths: [prometheus/rules/changes.yml, tests/rules_changes_test.yml, alertmanager/alertmanager.yml.example, grafana/build-dashboard.py, eol/assets.tsv]
-  - {day: 27, part: 3, category: change-mgmt, title: 稽核軌跡（暫定）, status: planned, date: , article: , projects: []}
+  - day: 27
+    part: 3
+    category: change-mgmt
+    title: 自動化稽核比對：當機器留下的日誌，對上工程師寫的變更單（VictoriaLogs × FortiGate × PVE）
+    status: published
+    date: 2026-10-11
+    article: https://ithelp.ithome.com.tw/articles/10423393
+    projects:
+      - repo: ivanusto/onprem-logs
+        tag: v0.5.0
+        sha: "284aeabc5461e763ae62a85ab8ab0316070d0a2c"
+        paths: [audit, archive/archive-day.sh, archive/verify-archive.sh, docker-compose.yml, collector/docker-user-allowlist.sh, retention.md, tests/smoke-audit.sh]
+      - repo: ivanusto/onprem-metrics
+        tag: v0.3.2
+        sha: "5e8264d6d403cb59635c184ac2020db916e96599"
+        paths: [prometheus/rules/audit.yml, tests/rules_audit_test.yml, alertmanager/alertmanager.yml.example]
   - {day: 28, part: 3, category: change-mgmt, title: 回滾與變更演練（暫定）, status: planned, date: , article: , projects: []}
   - {day: 29, part: 3, category: change-mgmt, title: AI Agent 進入維運流程的授權閘道（暫定）, status: planned, date: , article: , projects: []}
   - {day: 30, part: 3, category: change-mgmt, title: 一年成本與用電總結（暫定）, status: planned, date: , article: , projects: []}
