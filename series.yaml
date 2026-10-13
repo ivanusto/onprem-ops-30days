@@ -452,10 +452,10 @@ days:
   - day: 29
     part: 3
     category: change-mgmt
-    title: 代理程式的授權閘道：沒有單子就沒有工具，沒有人就沒有不可逆
-    status: draft
-    date:
-    article:
+    title: 打造地端維運的 AI 圍欄：Agent 授權閘道實作，無工單即無工具，無核准即無不可逆變更
+    status: published
+    date: 2026-10-13
+    article: https://ithelp.ithome.com.tw/articles/10424017
     projects:
       - repo: ivanusto/onprem-agent-gate
         tag: v0.1.0
