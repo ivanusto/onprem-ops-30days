@@ -11,6 +11,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 START, END = "<!-- INDEX:START -->", "<!-- INDEX:END -->"
+REPOS_START, REPOS_END = "<!-- REPOS:START -->", "<!-- REPOS:END -->"
+RUNS_LABEL = {"daily": "每天在跑", "drill": "週期演練", "on-demand": "需要時跑", "reference": "一次性紀錄"}
+FATE_LABEL = {"keep": "保留", "merge": "併入", "archive": "歸檔"}
 DAY_START, DAY_END = "<!-- DAY:START -->", "<!-- DAY:END -->"
 STATUS_LABEL = {"planned": "即將發表", "draft": "撰寫中"}
 
@@ -60,6 +63,29 @@ def render_index(data):
     return "\n".join(out)
 
 
+def render_repos(data):
+    """Day 30 的專案一覽：每個 repo 出現在哪幾天、文章釘過幾個 tag、最後一個 tag、每天跑不跑、去留。"""
+    days_of, last_tag = {}, {}
+    for d in data["days"]:
+        for p in d.get("projects") or []:
+            days_of.setdefault(p["repo"], []).append(d["day"])
+            if p.get("tag"):
+                last_tag[p["repo"]] = p["tag"]
+    out = ["| 專案 | 出現在 | 文章釘的 tag | 最後 tag | 運作 | 去留 | 備註 |", "|---|---|---:|---|---|---|---|"]
+    order = sorted(data.get("repos") or {}, key=lambda r: (min(days_of.get(r, [99])), r))
+    for r in order:
+        info = data["repos"][r] or {}
+        days = sorted(set(days_of.get(r, [])))
+        ntags = len({p.get("tag") for d in data["days"] for p in (d.get("projects") or []) if p["repo"] == r and p.get("tag")})
+        tag = f"[{last_tag[r]}]({gh(r, last_tag[r])})" if r in last_tag else " "
+        fate = FATE_LABEL.get(info.get("fate"), info.get("fate", ""))
+        if info.get("fate") == "merge" and info.get("into"):
+            fate += f" {info['into'].split('/', 1)[1]}"
+        out.append(f"| [{r.split('/', 1)[1]}](https://github.com/{r}) | Day {'、'.join(str(x) for x in days)} | {ntags} | {tag} "
+                   f"| {RUNS_LABEL.get(info.get('runs'), info.get('runs', ''))} | {fate} | {info.get('note', '')} |")
+    return "\n".join(out)
+
+
 def render_day_header(d):
     nn = f"{d['day']:02d}"
     lines = [f"# Day {nn}：{d['title']}", ""]
@@ -103,7 +129,10 @@ def main():
 
     readme = ROOT / "README.md"
     old = readme.read_text(encoding="utf-8")
-    targets[readme] = (old, replace_block(old, START, END, render_index(data)))
+    new = replace_block(old, START, END, render_index(data))
+    if REPOS_START in new:
+        new = replace_block(new, REPOS_START, REPOS_END, render_repos(data))
+    targets[readme] = (old, new)
 
     for d in data["days"]:
         path = ROOT / "days" / f"day-{d['day']:02d}.md"

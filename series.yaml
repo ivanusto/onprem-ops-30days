@@ -20,6 +20,36 @@ parts:
   2: 容量規劃、GPU 節點、儲存與備份
   3: 可觀測性、資安維運與可稽核的變更管理
 
+# Day 30 的盤點：每一個出現在 days 裡的 repo 都要有一條，反之亦然（check.py 會對）。
+# runs:  daily（有服務、cron 或排程在跑） | drill（週期演練，自己有 drills.jsonl） |
+#        on-demand（需要時手動跑） | reference（一次性的量測或紀錄，不再執行）
+# fate:  keep | merge（併入 into 指的 repo） | archive（唯讀，不再更新）
+# days 由 series.yaml 的 days 推算，不用寫。
+repos:
+  ivanusto/onprem-ops-30days:        {runs: daily, fate: keep, note: 索引。CI 每週一驗 tag、SHA、連結}
+  ivanusto/qpkg-template:            {runs: on-demand, fate: keep, note: 六個 QPKG 的上游骨架，改骨架才動}
+  ivanusto/open-webui-ollama-qpkg:   {runs: on-demand, fate: keep, note: 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝}
+  ivanusto/Jellyfin-QPKG:            {runs: on-demand, fate: keep, note: 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝}
+  ivanusto/roon-qpkg:                {runs: on-demand, fate: keep, note: 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝}
+  ivanusto/changedetection-qpkg:     {runs: on-demand, fate: keep, note: 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝}
+  ivanusto/homepage-qpkg:            {runs: on-demand, fate: keep, note: 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝}
+  ivanusto/qnap-comfyui-qpkg:        {runs: on-demand, fate: keep, note: 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝}
+  ivanusto/open-model-selector:      {runs: on-demand, fate: keep, note: 容量規劃時才跑}
+  ivanusto/dsv41-flash-vllm030-2x-gb10: {runs: reference, fate: archive, note: 一次補丁移植的紀錄，上游修了就沒有用途}
+  ivanusto/spark-baseline:           {runs: on-demand, fate: keep, note: 節點重灌或大版本升級後重跑}
+  ivanusto/gb10-ops:                 {runs: daily, fate: keep, note: 兩台 Spark 上的 host-guard 常駐}
+  ivanusto/nfs-model-library:        {runs: on-demand, fate: keep, note: 模型庫的寫入鎖、權限凍結與 verify，沒有排程，進新模型時才跑}
+  ivanusto/storage-path-bench:       {runs: reference, fate: archive, note: 一次量測，數字在 Day 14}
+  ivanusto/pve-qdevice-on-qnap:      {runs: daily, fate: keep, note: QDevice VM 常駐，收集端每分鐘跑的是 onprem-metrics 移植的 check.sh}
+  ivanusto/pve-backup-drill:         {runs: drill, fate: keep, note: 每月，DrillStale 30 天}
+  ivanusto/nas-backup-drill:         {runs: drill, fate: keep, note: 每月，DrillStale 30 天}
+  ivanusto/cloud-offload-drill:      {runs: drill, fate: keep, note: 每季，CloudDrillStale 90 天}
+  ivanusto/onprem-metrics:           {runs: daily, fate: keep, note: 收集端的規則、textfile 與儀表板，GPU 指標的 gb10-textfile 也在這裡}
+  ivanusto/onprem-logs:              {runs: daily, fate: keep, note: 收集端的收集、封存、稽核報告}
+  ivanusto/fortigate-log-viewer:     {runs: on-demand, fate: keep, note: 讀匯出檔時才開}
+  ivanusto/onprem-changes:           {runs: daily, fate: keep, note: 變更單，收集端每 15 分鐘拉}
+  ivanusto/onprem-agent-gate:        {runs: on-demand, fate: keep, note: 有單子寫 agent 的窗內才有事做，textfile 每 5 分鐘}
+
 days:
   - day: 1
     part: 1
@@ -473,4 +503,13 @@ days:
         tag: v0.3.4
         sha: "2dfbdb59ea94d8010714373e3f172dd9a0de5e0d"
         paths: [prometheus/rules/agent.yml, tests/rules_agent_test.yml, alertmanager/alertmanager.yml.example]
-  - {day: 30, part: 3, category: change-mgmt, title: 一年成本與用電總結（暫定）, status: planned, date: , article: , projects: []}
+  - day: 30
+    part: 3
+    category: change-mgmt
+    title: 完賽總結｜算清一年的電費、硬體折舊與雲端代價：地端 AI 維運 30 天留下的真實資產
+    status: published
+    date: 2026-10-14
+    article: https://ithelp.ithome.com.tw/articles/10424113
+    projects:
+      - repo: ivanusto/onprem-ops-30days
+        paths: [series.yaml, scripts/cost.py, lab/cost.yaml, lab/checklist.md]

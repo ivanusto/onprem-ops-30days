@@ -1,0 +1,198 @@
+# Day 30 的成本模型。scripts/cost.py 讀這個檔，印一張一年成本表。
+# 沒有的數字留 null，表格會印【待填】，合計標「不含待填」。數字旁邊寫來源。
+# 查價與量測日期：2026-10-13。
+
+currency: TWD
+
+# 電價。家用（住宅用、非時間電價）的累進費率，2026-04-01 起適用。
+# 來源：工商時報 2026-06-01 整理的台電 2026 電價表 https://www.ctee.com.tw/news/20260601700956-430104
+#       TVBS 同一份表 https://news.tvbs.com.tw/life/3201267 ，兩份六個級距一致。
+# 台電「電價表」頁面 https://www.taipower.com.tw/tc/page.aspx?mid=238 自動化工具打不開，沒有對到原始表。
+# 台電每兩個月抄表，級距在帳單上是兩倍，這裡按月算等價。電價調整時改這一段並更新來源。
+tariff:
+  kind: tiered                 # tiered（下面的級距） | flat（只用 flat_twd_per_kwh，例如時間電價或營業用自己換算）
+  flat_twd_per_kwh: null
+  summer_months: [6, 7, 8, 9]
+  tiers:                       # upto 是每月累計度數上限，最後一級 upto: null
+    - {upto: 120,  non_summer: 1.78, summer: 1.78}
+    - {upto: 330,  non_summer: 2.26, summer: 2.55}
+    - {upto: 500,  non_summer: 3.13, summer: 3.80}
+    - {upto: 700,  non_summer: 4.24, summer: 5.14}
+    - {upto: 1000, non_summer: 5.27, summer: 6.44}
+    - {upto: null, non_summer: 7.03, summer: 8.86}
+  # 場域以外的用電（這一戶本來就會用的度數）。場域的電費算的是「多出來的那一段」，
+  # 累進制下同樣的度數，疊在低基礎與高基礎上每度差兩倍以上。
+  household_base_kwh_per_month: 78     # 最近一期帳單整戶每月 395 度，減去場域的 317 度（下面設備表的合計，夏季含冷氣）
+  household_base_scenarios: [200, 400, 800]   # 敏感度：另外用這三個基礎度數各算一次
+
+# 設備。watts_avg 是平均功率（瓦），watts_source 寫它怎麼來的：
+#   measured 實測、spec 原廠規格值、estimate 估計、derived 由別的數字推得（冷氣）。
+#   watts_label 是表上「數據來源」那一欄顯示的文字，沒填就顯示上面四種之一。
+# 這個場域只有兩顆插座功率計，接在兩台 GB10 上。兩台 NAS 都沒有回報 UPS（qnap_ups_load_percent 是 -1），
+# 所以除了 GB10，其餘都是規格值或估計，換上實測時改 watts_avg 與 watts_source。
+# price_twd 是每台的購入價，price_note 寫實價或市價估計，amortize_years 是汰換週期，residual_twd 預估殘值。
+devices:
+  - name: NVIDIA DGX Spark 運算節點
+    role: GPU 運算，兩台以 TP=2 常駐一個模型
+    count: 2
+    watts_avg: 58.85
+    watts_label: 實測（Tapo 逐日能耗）
+    watts_source: measured
+    watts_note: Tapo P110M 逐日能耗，131 為 2026-09-10 到 10-12 平均 59.72 W，141 為 09-10 到 10-11 平均 57.97 W，含兩天負載測試，10 月常駐閒置約 54.4 W
+    hours_per_day: 24
+    price_twd: 100900
+    price_note: 實價（1TB 版本採購紀錄），兩台之間的 DAC 未計
+    amortize_years: 4
+    residual_twd: 0
+  - name: QNAP NAS（主儲存）
+    role: 集中儲存、模型庫、QDevice VM
+    count: 1
+    watts_avg: 86.96
+    watts_label: 原廠規格典型值
+    watts_source: spec
+    watts_note: 原廠「運作中，典型值」，硬碟插滿測試，實際插 6 顆 3.5 吋與 2 顆 2.5 吋
+    hours_per_day: 24
+    price_twd: 97440
+    price_note: 市價估計，八槽機身 51,900（通路最低價）加 6 顆 4TB NAS 碟各 7,590，兩顆 NVMe 與兩顆舊 2.5 吋碟未計
+    amortize_years: 5
+    residual_twd: 0
+  - name: QNAP NAS（備份副機）
+    role: 備份目的地，快照複寫與 HBS 3
+    count: 1
+    watts_avg: 40.54
+    watts_label: 原廠規格典型值
+    watts_source: spec
+    watts_note: 原廠「運作中，典型值」，硬碟插滿測試，實際是四顆舊碟，會比這個低
+    hours_per_day: 24
+    price_twd: 23500
+    price_note: 市價估計，機身通路最低價，硬碟是舊碟再利用，未計
+    amortize_years: 5
+    residual_twd: 0
+  - name: PVE 虛擬化節點（Intel 桌機）
+    role: 收集端 VM 與工作用 VM
+    count: 1
+    watts_avg: 25
+    watts_label: 工程估算
+    watts_source: estimate
+    watts_note: 同代 i5-6500 小機殼實測閒置 16 W（TechSpot），直立機殼與 64 GB 記憶體估 25 W
+    hours_per_day: 24
+    price_twd: 4000
+    price_note: 二手市價估計（2016 年機型），記憶體未計
+    amortize_years: 3
+    residual_twd: 0
+  - name: PVE 虛擬化節點（AMD 迷你主機）
+    role: 工作用 VM 與 LXC
+    count: 1
+    watts_avg: 10
+    watts_label: 工程估算
+    watts_source: estimate
+    watts_note: Ryzen 3 4300U 迷你主機，評測站估閒置 5 到 8 W，取 10 W
+    hours_per_day: 24
+    price_twd: 20490
+    price_note: 市價估計，同規格（32 GB、1 TB）迷你主機新品
+    amortize_years: 5
+    residual_twd: 0
+  - name: FortiGate 60F 防火牆
+    role: 防火牆
+    count: 1
+    watts_avg: 10.17
+    watts_label: 規格平均值
+    watts_source: spec
+    watts_note: 原廠規格「平均 10.17 W、最大 12.43 W」（常被引用的 17.2 W 是 61F）
+    hours_per_day: 24
+    price_twd: 35900
+    price_note: 市價估計，硬體含一年硬體保固、不含 FortiGuard 授權，授權到期不續約，沒有年費
+    amortize_years: 5
+    residual_twd: 0
+  - name: FortiAP 221E 無線基地台
+    role: 無線基地台
+    count: 2
+    watts_avg: 12.36
+    watts_label: 原廠規格值
+    watts_source: spec
+    watts_note: 原廠規格 12.36 W，未標平均或最大，視為上限
+    hours_per_day: 24
+    price_twd: 5980
+    price_note: 市價估計，只找到一筆新品
+    amortize_years: 5
+    residual_twd: 0
+  - name: 交換器（2.5G & 10G SFP+）
+    role: 骨幹，有切 VLAN
+    count: 1
+    watts_avg: 5
+    watts_label: 工程估算
+    watts_source: estimate
+    watts_note: 電源規格 12 V 1 A，評測寫「整機幾瓦」，取 5 W
+    hours_per_day: 24
+    price_twd: 500
+    price_note: 估計，台灣沒有通路，以中國售價約人民幣 110 元換算
+    amortize_years: 7
+    residual_twd: 0
+  - name: 網管交換器
+    role: 10GbE 交換器
+    count: 1
+    watts_avg: 32.83
+    watts_label: 原廠規格最大值
+    watts_source: spec
+    watts_note: 原廠只公布最大耗電 32.825 W，這裡用上限，實際會比較低
+    hours_per_day: 24
+    price_twd: 16873
+    price_note: 市價估計，通路最低價
+    amortize_years: 7
+    residual_twd: 0
+  - name: GPU 開發工作站（每日開機 8 小時）
+    role: ComfyUI 與封裝測試，RTX 5060 Ti 16GB
+    count: 1
+    watts_avg: 80
+    watts_label: 工程估算
+    watts_source: estimate
+    watts_note: 估計，閒置約 50 到 70 W、AI 負載整機約 250 到 320 W（同卡評測整機 301 W），開機的 8 小時多半閒置
+    hours_per_day: 8
+    price_twd: 21266
+    price_note: 實價，只算為這個系列增購的顯示卡（15,090）與兩組 32 GB 記憶體（各 3,088），主機本體不計
+    amortize_years: 4
+    residual_twd: 0
+  - name: 機房冷氣（場域散熱份額）
+    role: 移除上面設備的熱
+    count: 1
+    watts_avg: null            # 由 cop 推得：上面設備的全天平均瓦數除以 cop
+    watts_label: 熱負載推算（CSPF 7.0）
+    cop: 7.0
+    watts_note: Panasonic LX 2.8 kW 的 CSPF 7.00（通路標示），整年都假設要移除這些熱，冬天其實不用，是上限
+    hours_per_day: 24
+    price_twd: 0
+    price_note: 冷氣在場域之前就已裝設，不攤提，只算電
+    amortize_years: 10
+    residual_twd: 0
+
+# 雲端對照。每一項的 replaces 列它取代上面哪些設備（name），回本只算這些設備。
+# 不是一對一替代：兩台 GB10 共 256 GB 統一記憶體，雲上沒有同規格機型，用「GPU 記憶體放得下同一個模型」的機型對照。
+# 價格：Google 官方價格頁靠 JavaScript 顯示，數字取自 gcloud-compute.com 的鏡像（2026-10-11 更新），區域 asia-east1。
+cloud:
+  fx_twd_per_usd: 32.08        # 台灣銀行即期買入 32.005、賣出 32.155 的中間值，2026-10-13 22:42
+  scenarios: [實際忙碌時數, 常駐]
+  items:
+    - name: GPU 推論機型 g4-standard-96
+      replaces: [NVIDIA DGX Spark 運算節點]
+      usd_per_hour: 11.6998
+      hours_per_month:
+        實際忙碌時數: 4          # 收集端 10 天的 GPU 使用率 >10% 只有 1.1 與 1.4 小時，換成一個月約 3 到 4 小時
+        常駐: 730
+      source: https://gcloud-compute.com/g4-standard-96.html
+      checked: 2026-10-13
+      assumption: 2 張 RTX PRO 6000（共 192 GB），比兩台 GB10 現在佔用的約 196 GiB 少一點，KV 池要縮，同區的 4 張 H100（a3-highgpu-4g）每小時 51.18 美元
+    - name: 物件儲存（GCS）
+      replaces: [QNAP NAS（備份副機）]
+      monthly_usd: 4.67
+      source: https://cloud.google.com/storage/pricing
+      checked: 2026-10-02
+      assumption: Day 18 的成本表，HDP_Business 只傳實際用量時 GCS 一年約 56 美元（含一次還原），除以 12
+    - name: 託管 VM（e2 系列）
+      replaces: [PVE 虛擬化節點（Intel 桌機）, PVE 虛擬化節點（AMD 迷你主機）]
+      monthly_usd: 130.89
+      source: https://gcloud-compute.com/asia-east1.html
+      checked: 2026-10-13
+      assumption: 現在開著的四台，收集端 2 vCPU 4 GB 對 e2-medium（28.32）、工作用 VM 12 GB 對 e2-highmem-2（76.41）、兩個 DNS 過濾 LXC 對 e2-micro（各 7.08），加 120 GB 平衡型磁碟（12.00）
+
+# 人力不算進表格，但要寫一句：這三十天每天花在維運上的時間（不含寫文章），之後每週預估。
+labor_note: 每天約 1 小時，中小企業的話約 2 小時，大型企業至少 4 小時以上。

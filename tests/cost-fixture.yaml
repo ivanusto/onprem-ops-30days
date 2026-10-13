@@ -1,0 +1,27 @@
+# scripts/cost.py 的手算測試資料。數字刻意取整，期望值在 test_cost.py 的註解裡逐步算。
+currency: TWD
+tariff:
+  kind: tiered
+  flat_twd_per_kwh: null
+  summer_months: [6, 7, 8, 9]
+  tiers:
+    - {upto: 120,  non_summer: 1.78, summer: 1.78}
+    - {upto: 330,  non_summer: 2.26, summer: 2.55}
+    - {upto: 500,  non_summer: 3.13, summer: 3.80}
+    - {upto: 700,  non_summer: 4.24, summer: 5.14}
+    - {upto: 1000, non_summer: 5.27, summer: 6.44}
+    - {upto: null, non_summer: 7.03, summer: 8.86}
+  household_base_kwh_per_month: 300
+  household_base_scenarios: [300, 900]
+devices:
+  - {name: A, role: GPU, count: 2, watts_avg: 50, watts_source: measured, hours_per_day: 24, price_twd: 100000, amortize_years: 4, residual_twd: 0}
+  - {name: B, role: 工作站, count: 1, watts_avg: 100, watts_source: spec, hours_per_day: 12, price_twd: 20000, amortize_years: 5, residual_twd: 5000}
+  - {name: F, role: 租用, count: 1, watts_avg: 10, watts_source: spec, hours_per_day: 24, price_twd: null, yearly_fee_twd: 1200, amortize_years: 1}
+  - {name: AC, role: 冷氣, count: 1, watts_avg: null, cop: 4, hours_per_day: 24, price_twd: 0, amortize_years: 10}
+cloud:
+  fx_twd_per_usd: 30
+  scenarios: [busy, always]
+  items:
+    - {name: GPU, replaces: [A], usd_per_hour: 10, hours_per_month: {busy: 5, always: 730}, source: https://example.com/gpu}
+    - {name: 儲存, replaces: [A], monthly_usd: 5, source: https://example.com/storage}
+labor_note: 測試

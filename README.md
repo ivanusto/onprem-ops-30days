@@ -68,9 +68,41 @@
 | [27](days/day-27.md) | 自動化稽核比對：當機器留下的日誌，對上工程師寫的變更單（VictoriaLogs × FortiGate × PVE） | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10423393) | [onprem-logs@v0.5.0](https://github.com/ivanusto/onprem-logs/tree/v0.5.0)<br>[onprem-metrics@v0.3.2](https://github.com/ivanusto/onprem-metrics/tree/v0.3.2) |
 | [28](days/day-28.md) | Rollback 實戰演練：沒真正執行過的復原步驟，永遠只是一場美麗的假設 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10423709) | [onprem-changes@v0.2.0](https://github.com/ivanusto/onprem-changes/tree/v0.2.0)<br>[onprem-metrics@v0.3.3](https://github.com/ivanusto/onprem-metrics/tree/v0.3.3)<br>[onprem-logs@v0.5.3](https://github.com/ivanusto/onprem-logs/tree/v0.5.3) |
 | [29](days/day-29.md) | 打造地端維運的 AI 圍欄：Agent 授權閘道實作，無工單即無工具，無核准即無不可逆變更 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10424017) | [onprem-agent-gate@v0.1.0](https://github.com/ivanusto/onprem-agent-gate/tree/v0.1.0)<br>[onprem-changes@v0.3.0](https://github.com/ivanusto/onprem-changes/tree/v0.3.0)<br>[onprem-logs@v0.5.4](https://github.com/ivanusto/onprem-logs/tree/v0.5.4)<br>[onprem-metrics@v0.3.4](https://github.com/ivanusto/onprem-metrics/tree/v0.3.4) |
-| [30](days/day-30.md) | 一年成本與用電總結（暫定） | `change-mgmt` | 即將發表 |   |
+| [30](days/day-30.md) | 完賽總結｜算清一年的電費、硬體折舊與雲端代價：地端 AI 維運 30 天留下的真實資產 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10424113) | [onprem-ops-30days](https://github.com/ivanusto/onprem-ops-30days) |
 
 <!-- INDEX:END -->
+
+## 專案一覽
+
+三十天留下 23 個 repo。哪些每天在跑、哪些是演練、哪些需要時才跑、哪些寫完就不會再碰，與去留，資料在 `series.yaml` 的 `repos`（Day 30）。「文章釘的 tag」只算 `series.yaml` 裡被文章釘過的版本，repo 實際的 tag 可能更多。
+
+<!-- REPOS:START -->
+| 專案 | 出現在 | 文章釘的 tag | 最後 tag | 運作 | 去留 | 備註 |
+|---|---|---:|---|---|---|---|
+| [onprem-ops-30days](https://github.com/ivanusto/onprem-ops-30days) | Day 1、30 | 0 |   | 每天在跑 | 保留 | 索引。CI 每週一驗 tag、SHA、連結 |
+| [open-webui-ollama-qpkg](https://github.com/ivanusto/open-webui-ollama-qpkg) | Day 2、8 | 3 | [v2.0.0](https://github.com/ivanusto/open-webui-ollama-qpkg/tree/v2.0.0) | 需要時跑 | 保留 | 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝 |
+| [Jellyfin-QPKG](https://github.com/ivanusto/Jellyfin-QPKG) | Day 3、5 | 1 | [v1.2.1](https://github.com/ivanusto/Jellyfin-QPKG/tree/v1.2.1) | 需要時跑 | 保留 | 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝 |
+| [qpkg-template](https://github.com/ivanusto/qpkg-template) | Day 3、4、6、8 | 5 | [v0.2.1](https://github.com/ivanusto/qpkg-template/tree/v0.2.1) | 需要時跑 | 保留 | 六個 QPKG 的上游骨架，改骨架才動 |
+| [roon-qpkg](https://github.com/ivanusto/roon-qpkg) | Day 5 | 1 | [v1.2.3](https://github.com/ivanusto/roon-qpkg/tree/v1.2.3) | 需要時跑 | 保留 | 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝 |
+| [changedetection-qpkg](https://github.com/ivanusto/changedetection-qpkg) | Day 6 | 2 | [v0.60.3-1](https://github.com/ivanusto/changedetection-qpkg/tree/v0.60.3-1) | 需要時跑 | 保留 | 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝 |
+| [homepage-qpkg](https://github.com/ivanusto/homepage-qpkg) | Day 6 | 2 | [v1.0.8](https://github.com/ivanusto/homepage-qpkg/tree/v1.0.8) | 需要時跑 | 保留 | 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝 |
+| [qnap-comfyui-qpkg](https://github.com/ivanusto/qnap-comfyui-qpkg) | Day 7 | 2 | [v0.35.1-3](https://github.com/ivanusto/qnap-comfyui-qpkg/tree/v0.35.1-3) | 需要時跑 | 保留 | 發行物由 CI 產出，場域上未常駐，要用時從 Release 安裝 |
+| [open-model-selector](https://github.com/ivanusto/open-model-selector) | Day 9 | 1 | [v0.1.0](https://github.com/ivanusto/open-model-selector/tree/v0.1.0) | 需要時跑 | 保留 | 容量規劃時才跑 |
+| [dsv41-flash-vllm030-2x-gb10](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10) | Day 10 | 1 | [v0.1.0](https://github.com/ivanusto/dsv41-flash-vllm030-2x-gb10/tree/v0.1.0) | 一次性紀錄 | 歸檔 | 一次補丁移植的紀錄，上游修了就沒有用途 |
+| [spark-baseline](https://github.com/ivanusto/spark-baseline) | Day 11、12 | 2 | [v0.1.2](https://github.com/ivanusto/spark-baseline/tree/v0.1.2) | 需要時跑 | 保留 | 節點重灌或大版本升級後重跑 |
+| [gb10-ops](https://github.com/ivanusto/gb10-ops) | Day 12 | 2 | [v0.2.0](https://github.com/ivanusto/gb10-ops/tree/v0.2.0) | 每天在跑 | 保留 | 兩台 Spark 上的 host-guard 常駐 |
+| [nfs-model-library](https://github.com/ivanusto/nfs-model-library) | Day 13 | 1 | [v0.1.0](https://github.com/ivanusto/nfs-model-library/tree/v0.1.0) | 需要時跑 | 保留 | 模型庫的寫入鎖、權限凍結與 verify，沒有排程，進新模型時才跑 |
+| [storage-path-bench](https://github.com/ivanusto/storage-path-bench) | Day 14 | 1 | [v0.1.0](https://github.com/ivanusto/storage-path-bench/tree/v0.1.0) | 一次性紀錄 | 歸檔 | 一次量測，數字在 Day 14 |
+| [pve-qdevice-on-qnap](https://github.com/ivanusto/pve-qdevice-on-qnap) | Day 15 | 1 | [v0.1.0](https://github.com/ivanusto/pve-qdevice-on-qnap/tree/v0.1.0) | 每天在跑 | 保留 | QDevice VM 常駐，收集端每分鐘跑的是 onprem-metrics 移植的 check.sh |
+| [pve-backup-drill](https://github.com/ivanusto/pve-backup-drill) | Day 16 | 1 | [v0.1.0](https://github.com/ivanusto/pve-backup-drill/tree/v0.1.0) | 週期演練 | 保留 | 每月，DrillStale 30 天 |
+| [nas-backup-drill](https://github.com/ivanusto/nas-backup-drill) | Day 17 | 1 | [v0.1.0](https://github.com/ivanusto/nas-backup-drill/tree/v0.1.0) | 週期演練 | 保留 | 每月，DrillStale 30 天 |
+| [cloud-offload-drill](https://github.com/ivanusto/cloud-offload-drill) | Day 18 | 1 | [v0.1.0](https://github.com/ivanusto/cloud-offload-drill/tree/v0.1.0) | 週期演練 | 保留 | 每季，CloudDrillStale 90 天 |
+| [onprem-metrics](https://github.com/ivanusto/onprem-metrics) | Day 19、20、21、22、24、25、26、27、28、29 | 10 | [v0.3.4](https://github.com/ivanusto/onprem-metrics/tree/v0.3.4) | 每天在跑 | 保留 | 收集端的規則、textfile 與儀表板，GPU 指標的 gb10-textfile 也在這裡 |
+| [onprem-logs](https://github.com/ivanusto/onprem-logs) | Day 21、22、23、24、27、28、29 | 7 | [v0.5.4](https://github.com/ivanusto/onprem-logs/tree/v0.5.4) | 每天在跑 | 保留 | 收集端的收集、封存、稽核報告 |
+| [fortigate-log-viewer](https://github.com/ivanusto/fortigate-log-viewer) | Day 24 | 1 | [v0.1.0](https://github.com/ivanusto/fortigate-log-viewer/tree/v0.1.0) | 需要時跑 | 保留 | 讀匯出檔時才開 |
+| [onprem-changes](https://github.com/ivanusto/onprem-changes) | Day 26、28、29 | 3 | [v0.3.0](https://github.com/ivanusto/onprem-changes/tree/v0.3.0) | 每天在跑 | 保留 | 變更單，收集端每 15 分鐘拉 |
+| [onprem-agent-gate](https://github.com/ivanusto/onprem-agent-gate) | Day 29 | 1 | [v0.1.0](https://github.com/ivanusto/onprem-agent-gate/tree/v0.1.0) | 需要時跑 | 保留 | 有單子寫 agent 的窗內才有事做，textfile 每 5 分鐘 |
+<!-- REPOS:END -->
 
 ## 維護方式
 
@@ -82,7 +114,11 @@ python3 scripts/render.py            # 產生索引表與每日頁面表頭
 python3 scripts/render.py --check    # 只檢查是否已同步（CI 使用）
 GITHUB_TOKEN=$(gh auth token) python3 scripts/check.py   # 驗證 tag、SHA、檔案路徑、文章連結與文字
 python3 scripts/check.py --offline   # 只做欄位與文字檢查
+python3 scripts/cost.py              # Day 30 的一年成本表，資料在 lab/cost.yaml
+python3 -m unittest discover tests   # cost.py 的手算測試
 ```
+
+場域的設備清單在 [lab/inventory.md](lab/inventory.md)，可維運檢查清單在 [lab/checklist.md](lab/checklist.md)，成本模型在 [lab/cost.yaml](lab/cost.yaml)。
 
 每日發文流程：
 

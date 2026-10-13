@@ -2,7 +2,8 @@
 """驗證 series.yaml 與 repo 內文字。
 
 離線檢查：欄位格式、天數連續、published 必填欄位、破折號、私有 IP、家目錄路徑、
-          以及 .pii-patterns（不進版控，一行一個 regex）列出的個人字串。
+          以及 .pii-patterns（不進版控，一行一個 regex）列出的個人字串；
+          repos 盤點與 days 一對一，runs 與 fate 合法（Day 30）。
 線上檢查：repo 為公開、tag 存在且指向記錄的 SHA、paths 在該 SHA 存在、文章連結可達。
 
 GitHub API 會讀取 GITHUB_TOKEN 或 GH_TOKEN；沒有 token 時每小時限 60 次。
@@ -71,6 +72,31 @@ def check_schema(data):
             is_self = p.get("repo") == (data.get("series") or {}).get("repo")
             if d.get("status") == "published" and not p.get("tag") and not is_self:
                 err(f"{tag} 已發表但 {p.get('repo')} 沒有釘 tag")
+    check_repos(data, days)
+
+
+RUNS = {"daily", "drill", "on-demand", "reference"}
+FATES = {"keep", "merge", "archive"}
+
+
+def check_repos(data, days):
+    """Day 30 的盤點：repos 與 days 裡出現的 repo 一對一，runs 與 fate 合法。"""
+    repos = data.get("repos") or {}
+    used = {p.get("repo") for d in days for p in (d.get("projects") or [])}
+    for r in sorted(used - set(repos)):
+        err(f"repos 缺 {r}（days 裡用到）")
+    for r in sorted(set(repos) - used):
+        err(f"repos 多了 {r}（days 裡沒有用到）")
+    for r, info in repos.items():
+        info = info or {}
+        if info.get("runs") not in RUNS:
+            err(f"repos {r} runs 不合法：{info.get('runs')}（{'、'.join(sorted(RUNS))}）")
+        if info.get("fate") not in FATES:
+            err(f"repos {r} fate 不合法：{info.get('fate')}（{'、'.join(sorted(FATES))}）")
+        if info.get("fate") == "merge" and info.get("into") not in repos:
+            err(f"repos {r} fate 是 merge 但 into 不是 repos 裡的 repo：{info.get('into')}")
+        if not info.get("note"):
+            err(f"repos {r} 缺 note")
 
 
 def check_text():
