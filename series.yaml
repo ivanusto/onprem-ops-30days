@@ -429,6 +429,25 @@ days:
         tag: v0.3.2
         sha: "5e8264d6d403cb59635c184ac2020db916e96599"
         paths: [prometheus/rules/audit.yml, tests/rules_audit_test.yml, alertmanager/alertmanager.yml.example]
-  - {day: 28, part: 3, category: change-mgmt, title: 回滾與變更演練（暫定）, status: planned, date: , article: , projects: []}
+  - day: 28
+    part: 3
+    category: change-mgmt
+    title: Rollback 實戰演練：沒真正執行過的復原步驟，永遠只是一場美麗的假設
+    status: published
+    date: 2026-10-12
+    article: https://ithelp.ithome.com.tw/articles/10423709
+    projects:
+      - repo: ivanusto/onprem-changes
+        tag: v0.2.0
+        sha: "d203b97c49c28dee7b5f257c4615f6118b84ea77"
+        paths: [drills, changes/CR-2026-0011-rollback-drills.md, changes/TEMPLATE.md, scripts/changes-textfile.py, scripts/render.py, prometheus/changes.yml, tests]
+      - repo: ivanusto/onprem-metrics
+        tag: v0.3.3
+        sha: "28d4d57792c8c27bd8f1daf51a22f2de64f96e79"
+        paths: [prometheus/rules/changes.yml, tests/rules_changes_test.yml, alertmanager/alertmanager.yml.example, systemd/collector.cron]
+      - repo: ivanusto/onprem-logs
+        tag: v0.5.3
+        sha: "e465c1dab8b1a6d831d82baa8fec8df0c591aeaa"
+        paths: [firewall/fortigate-export-load.py, collector/onprem-logs-allowlist.default, tests/smoke-aup.sh]
   - {day: 29, part: 3, category: change-mgmt, title: AI Agent 進入維運流程的授權閘道（暫定）, status: planned, date: , article: , projects: []}
   - {day: 30, part: 3, category: change-mgmt, title: 一年成本與用電總結（暫定）, status: planned, date: , article: , projects: []}

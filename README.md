@@ -66,7 +66,7 @@
 | [25](days/day-25.md) | 資產生命週期與授權 EOL 監看：到期日只是一個數字，通通收進 Prometheus 時間序列！ | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10422732) | [onprem-metrics@v0.3.0](https://github.com/ivanusto/onprem-metrics/tree/v0.3.0) |
 | [26](days/day-26.md) | 變更管理實戰：串起 Git 變更單、監控與日誌，讓每次改動都有跡可循 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10423153) | [onprem-changes@v0.1.0](https://github.com/ivanusto/onprem-changes/tree/v0.1.0)<br>[onprem-metrics@v0.3.1](https://github.com/ivanusto/onprem-metrics/tree/v0.3.1) |
 | [27](days/day-27.md) | 自動化稽核比對：當機器留下的日誌，對上工程師寫的變更單（VictoriaLogs × FortiGate × PVE） | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10423393) | [onprem-logs@v0.5.0](https://github.com/ivanusto/onprem-logs/tree/v0.5.0)<br>[onprem-metrics@v0.3.2](https://github.com/ivanusto/onprem-metrics/tree/v0.3.2) |
-| [28](days/day-28.md) | 回滾與變更演練（暫定） | `change-mgmt` | 即將發表 |   |
+| [28](days/day-28.md) | Rollback 實戰演練：沒真正執行過的復原步驟，永遠只是一場美麗的假設 | `change-mgmt` | [閱讀](https://ithelp.ithome.com.tw/articles/10423709) | [onprem-changes@v0.2.0](https://github.com/ivanusto/onprem-changes/tree/v0.2.0)<br>[onprem-metrics@v0.3.3](https://github.com/ivanusto/onprem-metrics/tree/v0.3.3)<br>[onprem-logs@v0.5.3](https://github.com/ivanusto/onprem-logs/tree/v0.5.3) |
 | [29](days/day-29.md) | AI Agent 進入維運流程的授權閘道（暫定） | `change-mgmt` | 即將發表 |   |
 | [30](days/day-30.md) | 一年成本與用電總結（暫定） | `change-mgmt` | 即將發表 |   |
 
