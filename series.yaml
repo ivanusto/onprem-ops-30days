@@ -449,5 +449,28 @@ days:
         tag: v0.5.3
         sha: "e465c1dab8b1a6d831d82baa8fec8df0c591aeaa"
         paths: [firewall/fortigate-export-load.py, collector/onprem-logs-allowlist.default, tests/smoke-aup.sh]
-  - {day: 29, part: 3, category: change-mgmt, title: AI Agent 進入維運流程的授權閘道（暫定）, status: planned, date: , article: , projects: []}
+  - day: 29
+    part: 3
+    category: change-mgmt
+    title: 代理程式的授權閘道：沒有單子就沒有工具，沒有人就沒有不可逆
+    status: draft
+    date:
+    article:
+    projects:
+      - repo: ivanusto/onprem-agent-gate
+        tag: v0.1.0
+        sha: "d123e111c8a2994fab1d10491bf2b81e68fa3f61"
+        paths: [gate/core.py, gate/mcp_server.py, bin/gatectl, bin/gate-mcp, tools.json, config.json.example, prometheus/agent.yml, docs/targets.md, docs/mcp-clients.md, docs/iso27001.md, tests]
+      - repo: ivanusto/onprem-changes
+        tag: v0.3.0
+        sha: "497b0e7925e2c5d5c821b121e36897f6e58ae38d"
+        paths: [changes/CR-2026-0015-agent-gate-qdevice.md, changes/TEMPLATE.md, scripts/check.py]
+      - repo: ivanusto/onprem-logs
+        tag: v0.5.4
+        sha: "d15459843b58819c6fdcd6d52289697c94895f9a"
+        paths: [audit/audit-report.py, audit/queries.md, tests/smoke-audit.sh]
+      - repo: ivanusto/onprem-metrics
+        tag: v0.3.4
+        sha: "2dfbdb59ea94d8010714373e3f172dd9a0de5e0d"
+        paths: [prometheus/rules/agent.yml, tests/rules_agent_test.yml, alertmanager/alertmanager.yml.example]
   - {day: 30, part: 3, category: change-mgmt, title: 一年成本與用電總結（暫定）, status: planned, date: , article: , projects: []}
