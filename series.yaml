@@ -469,7 +469,7 @@ days:
     projects:
       - repo: ivanusto/onprem-changes
         tag: v0.2.0
-        sha: "d203b97c49c28dee7b5f257c4615f6118b84ea77"
+        sha: "d4886970c6ff5520be68cb3de8918e2d94c97bbe"
         paths: [drills, changes/CR-2026-0011-rollback-drills.md, changes/TEMPLATE.md, scripts/changes-textfile.py, scripts/render.py, prometheus/changes.yml, tests]
       - repo: ivanusto/onprem-metrics
         tag: v0.3.3
@@ -493,7 +493,7 @@ days:
         paths: [gate/core.py, gate/mcp_server.py, bin/gatectl, bin/gate-mcp, tools.json, config.json.example, prometheus/agent.yml, docs/targets.md, docs/mcp-clients.md, docs/iso27001.md, tests]
       - repo: ivanusto/onprem-changes
         tag: v0.3.0
-        sha: "497b0e7925e2c5d5c821b121e36897f6e58ae38d"
+        sha: "6b4b76d17062d8aa5ec4310e111127418bc638ed"
         paths: [changes/CR-2026-0015-agent-gate-qdevice.md, changes/TEMPLATE.md, scripts/check.py]
       - repo: ivanusto/onprem-logs
         tag: v0.5.4
